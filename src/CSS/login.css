@@ -1,0 +1,173 @@
+.mainLogin {
+  background-color: aliceblue !important;
+  /* width: 100% !important; */
+  /* height: 100% !important; */
+}
+
+.mainLogin {
+  background-color: aliceblue !important;
+  /* width: 100% !important; */
+  height: 100% !important;
+}
+.loginsection {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 50px;
+  border-color: blue !important ;
+  margin-left: 50px;
+  /* text-align: "center"; */
+  width: 95%;
+  margin-bottom: 40px;
+  height: 93%;
+}
+.tagLine {
+  font-size: 40px;
+  font-weight: 500;
+  /* font-family: "sans-serif"; */
+  /* padding-top: 30px; */
+  margin-top: 10px;
+}
+.emailMainGrid {
+  width: 100%;
+  margin-top: 30px !important;
+  /* background-color: red; */
+}
+.loginEmailError {
+  margin-right: 360px;
+  color: red;
+}
+.passwordDanger {
+  margin-right: 200px;
+  color: red;
+}
+.forgetPasswordText {
+  margin-left: 280px;
+  margin-top: 30px;
+  color: #4f8df9;
+}
+.loginBtn {
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  height: 50px;
+  font-size: 20px;
+  width: 180px;
+  background-color: #1ec28b;
+  color: #ffffff;
+}
+.notRegisterText {
+  font-size: 18px;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+.createText {
+  color: #4f8df9;
+  font-weight: 500px;
+  margin-left: 3px;
+}
+.travelCompanionImg {
+  width: 100%;
+  margin-top: 70px;
+}
+.loginsecondimg {
+  width: 100%;
+  height: 50%;
+}
+.passwordMainGrid {
+  margin-top: 30px !important;
+}
+.emailLabelLogin {
+  /* margin-right: 385px !important; */
+  margin-left: -373px;
+  font-weight: 400 !important;
+}
+
+.emailLoginInput {
+  /* padding-left: 20px !important; */
+  width: 429px !important;
+  height: 45px !important;
+  border-radius: 5px !important;
+  margin-top: 5px  !important;
+}
+
+.passwordLoginLabel {
+  margin-left: -335px;
+  font-weight: 400 !important;
+  margin-top: 150 !important;
+}
+
+.passwordLoginInput {
+  /* padding-left: 20px !important; */
+  width: 429px !important;
+  height: 45px !important;
+  margin-top: 8px !important;
+  border-radius: 5px !important;
+  margin-top: -3px !important;
+
+}
+
+.googlelogin {
+  width: 13.5rem !important;
+  height: 2.6rem !important;
+  color: #004170 !important;
+  text-decoration: solid;
+  padding-left: 1rem !important;
+}
+#loginside {
+  margin-left: 2.2rem;
+}
+
+.forget-clr:active {
+  color: #4f8df9;
+}
+
+.hideshowPassword {
+  margin-left: -58px;
+  margin-bottom: -10px;
+}
+
+@media screen and (max-width: 480px) {
+  .loginsection {
+    margin-left: 12px !important;
+  }
+  /* .loginEmailError {
+    margin-right: 2px !important;
+    color: red;
+  } */
+  .hrLine {
+    visibility: visible !important;
+  }
+  .travelCompanionImg {
+    width: 100% !important;
+  }
+  .containerMainGrid {
+    /* background-color: red; */
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .emailLoginInput {
+    /* width: fit-content !important; */
+    width: 80% !important;
+  }
+  .passwordLoginInput {
+    /* max-width: fit-content !important; */
+    width: 80% !important;
+  }
+  .emailLabelLogin {
+    margin-left: 30px !important;
+    margin-left: -290px !important;
+  }
+  .passwordLoginLabel {
+    /* margin-right: 150px !important; */
+    margin-left: -254px !important;
+  }
+  .forgetPasswordText {
+    margin-left: 175px !important;
+    color: #4f8df9 !important;
+    font-weight: 500 !important;
+  }
+  .notRegisterText {
+    margin-bottom: 45px !important;
+  }
+}

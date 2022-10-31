@@ -1,0 +1,83 @@
+.studentMainHeading {
+    /* display: flex; */
+    margin-left: -43px !important;
+    font-size: x-large;
+    font-family: sans-serif !important;
+    font-weight: 500 !important;
+  }
+  .hrStudent {
+    width: 305px;
+    margin-left: 189px;
+    border: 1px solid rgb(30, 194, 139) !important;
+  }
+  
+  .hrDiv {
+    margin-top: -18px !important;
+  }
+  .makeMoneyText {
+    width: 846px;
+    margin-left: 144px;
+    font-size: 28px;
+    display: flex;
+    text-align: initial;
+    line-height: 2;
+  }
+  .fortImage {
+    width: 100%;
+  }
+  .globeFlightImage {
+    width: 67%;
+    margin-left: -110px;
+  }
+  .itTechImage {
+    width: 79%;
+    margin-top: 40px;
+  }
+  .itServiceText {
+    width: 976px;
+    display: flex;
+    text-align: initial;
+    line-height: 2;
+    margin-left: 144px;
+    font-size: 28px;
+  }
+  .itServiceSecondText {
+    width: 991px;
+    display: flex;
+    text-align: initial;
+    line-height: 2;
+    margin-left: 144px;
+    font-size: 28px;
+  }
+  .ruReadyText {
+    width: 80%;
+  }
+  .addYourTrip {
+    text-align: initial;
+    width: 765px;
+    font-size: 30px;
+    margin-left: 190px;
+    line-height: 1.5;
+  }
+  .createTripBtn {
+    display: flex;
+    height: 60px;
+  }
+  .createBtn {
+    display: flex;
+    border: 0.5px solid #164938;
+    color: #164938;
+    background: white;
+    width: 330px;
+    align-items: center;
+    margin-left: 187px;
+    border-radius: 5px;
+    padding-left: 42px;
+    font-size: 25px;
+    font-weight: 550;
+  }
+  .ArrowCircleRightRoundedIcon {
+    margin-left: 20px;
+    font-size: 35px !important;
+  }
+  

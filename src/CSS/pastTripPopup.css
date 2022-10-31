@@ -1,0 +1,352 @@
+/* .modalBackground {
+  width: 100vw;
+  height: 60vh;
+  background-color: rgba(226, 214, 214, 0.447);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  height: 500px;
+  margin-top: 260px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -14px;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+} */
+.pastTripPopup-modalBackground {
+  width: 98vw;
+    height: 102rem;
+    background-color: rgba(226, 214, 214, 0.447);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -368px;
+    margin-top: -708px;
+    z-index: 20;
+}
+
+.pastTripPopup-modalContainer {
+  width: 580px;
+  height: 33%;
+  margin-top: -360px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.pastTripPopup-modalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pastTripPopup-titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pastTripPopup-titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 23px;
+  color: pink;
+  cursor: pointer;
+  margin-top: -13px;
+}
+
+.pastTripPopup-modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.pastTripPopup-modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pastTripPopup-modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: rgb(32, 90, 197);
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#pastTripPopup-cancelBtn {
+  background-color: crimson;
+}
+
+.pastTripPopupHeading {
+  font-family: sans-serif;
+  margin-bottom: 14px;
+  margin-top: -48px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+
+.pastTripPopuphrlines {
+  background: #1ec28b;
+  width: 39rem;
+  height: 1px;
+  margin-top: 8px;
+  margin-left: -24px;
+  margin-bottom: -54px;
+}
+
+.pastTripPopupPageContainer {
+  display: contents !important;
+}
+
+.pastTripPopupUpload {
+  width: 36rem;
+  height: 125px !important;
+  border-radius: 10px;
+  margin-top: 60px;
+  margin-left: -25px;
+  border: 1px solid #1ec28b;
+}
+
+.pastTripPopupUploadinnerCard {
+  width: 96%;
+  height: 109px !important;
+  border-radius: 10px;
+  margin-top: 7px;
+  margin-left: 10px;
+  /* border: 1px solid #1ec28b; */
+  /* background: rgb(30 194 139 / 60%) !important; */
+  background: rgba(30, 194, 139, 0.1) !important;
+}
+
+.pastTripPopupIcon {
+  margin-left: 43% !important;
+  margin-top: 10px !important;
+}
+
+.pastTripPopupText {
+  /* text-align: center; */
+  font: icon;
+  font-weight: 600;
+  font-size: 19px;
+  color: black;
+  margin-left: 37%;
+  width: 110px;
+}
+
+.pastTripPopupSubText {
+  text-align: center;
+  font: small-caption;
+  font-size: 10px;
+}
+
+.pastTripPopupdescription {
+  width: 34rem;
+  height: 50px !important;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: -22px;
+  border: 1px solid #1ec28b;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-top: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.pastTripPopupCaptchaMain {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+
+.pastTripPopupCaptchaText{
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.pastTripPopupCaptcha {
+  display: flex;
+  margin-left: 4% !important;
+}
+
+.pastTripPopupBox {
+  display: flex;
+  margin-top: 30px;
+}
+
+.pastTripPopupBoxText {
+  font-size: 11px;
+  margin-top: 13px;
+  margin-left: -21px;
+}
+
+.pastTripPopupCheckBox {
+  /* margin-top: 124px; */
+  color: grey;
+  margin-bottom: 55px;
+  margin-left: 6px;
+}
+
+.pastTripPopupBtn {
+  background-color: #1ec28b !important;
+  color: white !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  height: 40px;
+  margin-left: 20px !important;
+  width: 70% !important;
+  margin-top: -92px !important;
+}
+
+/* .productImageFeaturedStar {
+  position: "absolute";
+  top: 0;
+  right: 0;
+  color: green;
+  opacity: 0
+}
+
+.fileContainer {
+  background: #fff !important;
+  box-shadow: 2px 2px 3px 0 rgb(0 0 0 / 5%)!important;
+  position: relative!important;
+  border-radius: 10px!important;
+  padding: 20px 0!important;
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  flex-direction: column!important;
+  margin: 10px auto!important;
+  transition: all 0.3s ease-in!important;
+}
+
+.fileUploader {
+  width: 100%!important;
+}
+
+.fileContainer p {
+  font-size: 12px!important;
+  margin: 8px 0 4px!important;
+}
+
+.fileContainer .errorsContainer {
+  max-width: 300px!important;
+  font-size: 12px!important;
+  color: red!important;
+  text-align: left!important;
+}
+
+.fileContainer .errorsContainer {
+  max-width: 300px!important;
+  font-size: 12px!important;
+  color: red!important;
+  text-align: left!important;
+} */
+
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  /* background-color: #f6f9fe; */
+  /* height: 100vh; */
+}
+.image-item {
+  display: flex;
+  margin: -79px 37%;
+  height: auto !important;
+  width: 100% !important;
+}
+.image-item__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+button {
+  height: 40px;
+  /* display: none; */
+}
+
+.hLCrav .rnc {
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  max-width: 255px;
+  background-color: white !important;
+  border-radius: 6px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.hLCrav .rnc-canvas {
+  box-sizing: border-box;
+  background-color: lightgrey  !important;
+  /* border-radius: 4px; */
+}
+.hLCrav .rnc-button {
+  
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  /* background: #1ec28b !important; */
+  border: 1px solid #1ec28b !important;
+  color: #1ec28b !important;
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.hLCrav .rnc-input {
+  border: 1px solid #1ec28b !important;
+  padding: 0 11px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #46474A;
+}

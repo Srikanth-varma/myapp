@@ -1,0 +1,257 @@
+.dashboard-main{
+    display: flex;
+    }
+  .pastdashbox{
+    width: 700px;
+    height: 1650px;
+    background-color: aliceblue;
+    margin-top: -46px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+    .search-btn {
+        border: 2px solid #1ec28b;
+        width: 70%;
+        border-radius: 5px;
+        height: 50px;
+        margin-top: 36px;
+    }
+  
+    /* .search-txt{
+     margin-left: 15px !important;
+    font-size: 20px;
+    border: 1px solid #1ec28b;
+    width: 80%;
+    border-radius: 4px;
+    height: 46px;
+    
+    } */
+    .search-btn-icon {
+      margin-left: -40px !important;
+      color: #1ec28b !important;
+    }
+    .upcoming-text {
+        text-align: left;
+        margin-left: 15%;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 45px;
+    }
+    .card-Uptrip {
+        display: inline-block;
+        width: 95% !important;
+        margin-bottom: 30px;
+        height: 300px;
+        margin-left: 129px;
+        margin-top: 15px;
+        box-shadow: 0px 10px 1px -1px #164938 !important;
+    }
+    .card-Uptripcontainer {
+      height: 150px;
+      width: 150px;
+    }
+    .card-Uptrip-inner {
+        height: 125px;
+        width: 125px;
+        background: rgb(30 194 139 / 60%);
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        margin-left: 26%;
+        margin-top: 12%;
+    }
+    .carduptrip-img {
+      height: 100px;
+      padding-top: 12px;
+    }
+    .uptrip-name {
+        font-family: sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: -16px;
+    }
+    .uptrip-date {
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: -12px;
+    }
+    .uptrip-city {
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: -12px;
+    }
+    /* Recent Invites */
+    .recieved-text {
+        text-align: left;
+        margin-left: 7%;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 45px;
+        padding-top: 35px;
+    }
+    .card-recent {
+        /* display: inline-block;
+        width: 100% !important;
+        margin-bottom: 30px;
+        height: 380px;
+        margin-left: 129px;
+        margin-top: 15px;
+        box-shadow: 0px 10px 1px -1px #164938 !important; */
+        /* display: inline-block;
+    width: 158% !important;
+    margin-bottom: 30px;
+    height: 677px;
+    margin-left: 55px;
+    margin-top: 15px;
+    box-shadow: 0px 10px 1px -1px #164938 !important; */
+    }
+   
+    .card-past-trip1{
+      display: inline-block;
+    width: 110% !important;
+    margin-bottom: 30px;
+    height: 670px;
+    margin-left: 50px;
+    margin-top: 15px;
+    box-shadow: 0px 10px 1px -1px #164938 !important;
+    padding-right: 10px;
+    }
+    .card-past-trip2{
+      display: inline-block;
+      width: 110% !important;
+      margin-bottom: 30px;
+      height: 670px;
+      margin-left: 150px;
+      margin-top: 15px;
+      box-shadow: 0px 10px 1px -1px #164938 !important;
+      padding-right: 10px;
+    }
+    .card-past-trip3{
+      display: inline-block;
+    width: 110% !important;
+    margin-bottom: 30px;
+    height: 670px;
+    margin-left: 50px;
+    margin-top: 15px;
+    box-shadow: 0px 10px 1px -1px #164938 !important;
+    padding-right: 10px;
+    }
+    .card-past-trip4{
+      display: inline-block;
+      width: 110% !important;
+      margin-bottom: 30px;
+      height: 670px;
+      margin-left: 150px;
+      margin-top: 15px;
+      box-shadow: 0px 10px 1px -1px #164938 !important;
+      padding-right: 10px;
+    }
+    .card-recentcontainer {
+      height: 150px;
+      width: 150px;
+    }
+    .card-past-trip-inner {
+        height: 125px;
+        width: 125px;
+        background: rgb(30 194 139 / 60%);
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        margin-left: 40%;
+        margin-top: 12%;
+    }
+    .cardrecent-img {
+      height: 100px;
+      padding-top: 12px;
+    }
+    .cardrecent-name {
+        font-family: sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: -16px;
+    }
+    .cardrecent-date {
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: -20px;
+    }
+    .cardrecent-city {
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: -20px;
+    }
+    .cardrecent-para {
+        font-size: 11px;
+    margin-top: -18px;
+    width: 198px;
+    }
+    .accept-btn {
+        background-color: #1ec28b !important;
+        color: white !important;
+        border-radius: 21px!important;
+        border: none;
+        font-size: 11px !important;
+        height: 26px;
+     
+    }
+    
+    
+    .cancel-btn {
+        background-color: #1ec28b !important;
+        color: white !important;
+        border-radius: 21px!important;
+        border: none;
+        font-size: 11px !important;
+        height: 26px;
+        margin-left: 50px !important;
+    }
+      /* Profile  */
+      .card-profile {
+        display: inline-block;
+        width: 80% !important;
+        margin-bottom: 30px;
+        height: 250px;
+      }
+      .card-profilecontainer {
+        height: 150px;
+        width: 150px;
+      }
+      .card-profile-inner {
+          height: 150px;
+          width: 150px;
+        background: rgb(30 194 139 / 60%);
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        margin-left: 25%;
+        margin-top: 5%;
+      }
+      .cardprofile-img {
+          height: 110px;
+          padding-top: 20px;
+      }
+      .profile-name {
+          font-family: sans-serif;
+          font-size: 25px;
+          margin-left: 27px;
+          font-weight: 600;
+          margin-top: 10px!important;
+      }
+      .profile-edit-btn {
+          background-color: #1ec28b !important;
+          color: white !important;
+          border-radius: 5px!important;
+          border: none;
+          font-size: 11px !important;
+          margin-left: 33px !important;
+          margin-top: 15px !important;
+      }
+  

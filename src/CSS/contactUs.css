@@ -1,0 +1,105 @@
+.contactUS-heading {
+  text-align: initial;
+  margin-left: 107px;
+  line-height: 50px;
+  font-family: sans-serif;
+}
+
+.contactUS-headingText {
+  color: #000000;
+  font-size: 50px;
+}
+
+.contactUS-Image {
+  margin-top: 0px;
+  margin-left: 91px;
+  width: 1200px;
+}
+
+.contactUS-Btn {
+  background-color: #1ec28b !important;
+  color: white !important;
+  margin-left: 0px !important;
+  width: 40% !important;
+  /* margin-top: -59px !important; */
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  margin-bottom: 50px !important;
+}
+
+/* --------------------------------CONTACT-FORM-------------- */
+.contactFormfullNameInput {
+  width: 61rem;
+  margin-top: 10px !important;
+  margin-left: -83px !important;
+}
+
+.MuiFormLabel-root {
+  color: #000000 !important;
+}
+
+.contactFormText{
+  display: flex;
+    margin-top: 20px;
+    margin-left: 70px;
+    
+}
+
+.contactFormInput {
+  width: 980px !important;
+  margin-left: 70px !important;
+  margin-top: 5px !important;
+}
+
+
+
+.contactFormShortDescText {
+  width: 61rem;
+  height: 100px !important;
+  border-radius: 10px;
+  margin-top: 48px;
+  margin-left: -8px;
+  border: 1px solid #1ec28b;
+  font-size: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.contactFormShortDescMaxChar {
+  margin-left: 65%;
+  margin-top: 6px;
+  color: hotpink;
+  font-size: 13px;
+}
+
+.contactFormcountryGrid {
+  margin-left: 39px !important;
+  margin-top: 38px !important;
+}
+
+
+
+.contactFormPhoneText{
+  margin-right: 82%;
+}
+
+.contactFormPhoneNumber {
+  display: flex;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.contactFormPhoneInput {
+  width: 58rem;
+  margin-left: -104px !important;
+  /* margin-top: -24px !important; */
+}
+
+.contact-CaptchaLabel {
+  margin: 17px !important;
+}
+
+.contact-Captcha {
+  display: flex;
+  justify-content: center;
+}

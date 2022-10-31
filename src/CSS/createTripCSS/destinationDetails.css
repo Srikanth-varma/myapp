@@ -1,0 +1,474 @@
+.destinationdetailStep {
+  color: grey;
+  /* margin-bottom: 30px; */
+  margin-top: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 48px;
+}
+
+.destinationdetailmain {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 50px;
+  font-size: 23px;
+  font-weight: 500;
+  margin-left: 150px;
+  display: flex;
+}
+.destinationdetailhrlines {
+  background: #1ec28b;
+  width: 78%;
+  height: 2px;
+  margin-top: -6px;
+  margin-left: 148px;
+  margin-bottom: -37px;
+}
+
+.destinationdetailSub {
+  font-size: 20px;
+  margin-left: 150px;
+  font-weight: bold;
+  margin-top: 86px;
+  display: flex;
+}
+
+.destinationdetailSubArt {
+  color: pink;
+}
+
+.destinationdetailInputFrom {
+  /* width: 550px !important; */
+  width: 90% !important;
+  margin-left: -99px !important;
+  margin-top: 45px !important;
+}
+
+.destinationdetailInputTo {
+  /* width: 550px !important; */
+  width: 85% !important;
+  margin-left: -20px !important;
+  margin-top: 45px !important;
+}
+
+.destinationdetailFlyingFrom {
+  width: 980px !important;
+  margin-left: 76px !important;
+  margin-top: 35px !important;
+}
+
+.destinationdetaildestination {
+  width: 980px !important;
+  margin-left: 76px !important;
+  margin-top: 35px !important;
+}
+
+.destinationdetailyetToBook {
+  width: 85% !important;
+  margin-left: -19px !important;
+  margin-top: 34px !important;
+}
+
+.destinationdetaillanguage {
+  color: black !important;
+  margin-top: -13px;
+}
+
+.destinationdetailAirLines {
+  margin-left: 2px;
+  font-size: 16px !important;
+  color: black !important;
+}
+
+.destinationdetailTravelscope {
+  border: 1px solid #1ec28b;
+  margin-top: 80px;
+  width: 66%;
+  height: 120px;
+  border-radius: 10px;
+  margin-left: 240px;
+}
+
+.destinationdetailHead {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-top: 10px;
+  color: black !important;
+  margin-left: 15px;
+  height: 35px;
+  display: flex;
+}
+
+.destinationdetailRadioGroup {
+  margin-left: 24%;
+  margin-top: 0px;
+  display: flex !important;
+  flex-direction: row !important;
+  grid-column-gap: 19px !important;
+  column-gap: 22px !important;
+}
+
+.destinationdetailBooked {
+  font-size: 19px;
+  margin-left: 20%;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.destinationdetailYetBook {
+  margin-left: 0px !important;
+  font-size: 19px;
+  /* margin-left: 20%; */
+  margin-top: 10px;
+  font-weight: 500;
+  /* font-size: 50px; */
+}
+.activeYetBook {
+  margin-left: 0px !important;
+}
+
+/* .destinationdetailRadioGroupLabel{
+
+} */
+
+.destinationdetailPageContainer {
+  margin-left: 70px !important;
+}
+
+.destinationdetailStops {
+  border: 2px solid #1ec28b;
+  margin-top: 8px;
+
+  /* width: 540px; */
+  height: 63px;
+  margin-left: 16px;
+  border-radius: 10px;
+}
+
+.destinationdetailAirline {
+  /* width: 200px; */
+  margin-left: 10px;
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.destinationdetailPreferedLanguage {
+  margin-left: 176px;
+  margin-top: 37px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.destinationdetailPrelanguageInput {
+  width: 974px !important;
+  margin-left: 175px !important;
+  margin-top: 7px !important;
+}
+
+.destinationdetailsMandatory {
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 60px;
+  color: grey;
+  margin-bottom: 20px;
+  width: 200px !important;
+  margin-left: 158px;
+}
+
+.css-1w79hki-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: 2px solid #1ec28b !important;
+}
+.css-1w79hki-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.css-1a1fmpi-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.css-1a1fmpi-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid #1ec28b !important;
+}
+.css-uy64dn-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.css-uy64dn-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+/* svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  color: pink;
+} */
+
+/* -------------------------------------------DESTINATIONDETAILSSELF--------=------------------------------------------ */
+.destinationSelfStep {
+  color: grey;
+  /* margin-bottom: 30px; */
+  margin-top: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 48px;
+}
+
+.destinationSelfmain {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* box-shadow: 0px 3px 1px -1px #1ec28b !important; */
+  /* width: 570px; */
+  /* margin-bottom: 46px;  */
+  margin-top: 34px;
+  font-size: 23px;
+  margin-left: 48px;
+  font-weight: 500;
+  /* margin-left: 0px; */
+}
+.destinationSelfhrlines {
+  background: #1ec28b;
+  width: 90%;
+  height: 2px;
+  margin-top: -6px;
+  margin-left: 49px;
+  margin-bottom: -37px;
+}
+
+.destinationSelfSub {
+  /* width: 170px; */
+  font-size: 20px;
+  margin-left: 47px;
+  font-weight: bold;
+  margin-top: 86px;
+}
+
+.destinationSelfSubArt {
+  color: pink;
+}
+
+.destinationSelfInput {
+  /* width: 550px !important; */
+  width: 81% !important;
+  margin-left: -33px !important;
+  margin-top: 45px !important;
+}
+
+.destinationSelfAirlinesSub {
+  font-size: 20px;
+  margin-left: 90px;
+  font-weight: bold;
+  margin-top: 86px;
+  display: flex;
+}
+
+.destinationSelfCard {
+  background: rgb(30 194 139 / 10%) !important;
+  width: 87%;
+  /* margin: auto; */
+  margin-top: 30px !important;
+  margin-left: 89px;
+}
+
+.destinationSelfFlyingFrom {
+  margin-top: 60px !important;
+  /* margin-left: -175px !important; */
+  text-align: center;
+  margin-left: -84px !important;
+  font-size: 17px;
+}
+
+.destinationSelf-CardAirline {
+  margin-top: 60px !important;
+  margin-left: -100px !important;
+  text-align: center;
+  font-size: 17px;
+}
+
+.destinationSelfSelect {
+  margin-left: 110px !important;
+  width: 86% !important;
+  margin-top: 15px !important;
+}
+
+.destinationSelfTransit {
+  margin-top: 45px !important;
+  /* margin-left: -175px !important; */
+  text-align: center;
+  margin-left: -93px !important;
+  font-size: 17px;
+}
+
+.destinationSelf-TransitCardAirline {
+  margin-top: 45px !important;
+  margin-left: -88px !important;
+  text-align: center;
+  font-size: 17px;
+}
+
+.destinationSelfTransitSelect {
+  margin-left: 110px !important;
+  width: 86% !important;
+  margin-top: 15px !important;
+}
+
+.destinationSelflanguage {
+  color: black !important;
+  margin-top: -13px;
+}
+
+.destinationSelfAirLines {
+  margin-left: 2px;
+  font-size: 16px !important;
+  color: black !important;
+}
+
+.destinationSelfTravelscope {
+  border: 2px solid #1ec28b;
+  margin-top: 80px;
+  width: 70%;
+  height: 120px;
+  border-radius: 10px;
+  margin-left: 170px;
+}
+
+.destinationSelfHead {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin-top: 10px;
+  color: black !important;
+  margin-left: 15px;
+  height: 35px;
+}
+
+.destinationSelfRadioGroup {
+  margin-left: 204px;
+  margin-top: 11px;
+  display: flex !important;
+  flex-direction: row !important;
+  grid-column-gap: 50px !important;
+  column-gap: 120px !important;
+}
+
+/* .destinationSelfConfrimed{ 
+
+} */
+
+.destinationSelfYetBook {
+  margin-left: 0px !important;
+  /* font-size: 50px; */
+}
+.activeConfrimed {
+  margin-left: 0px !important;
+}
+
+/* .destinationSelfRadioGroupLabel{
+
+} */
+
+.destinationSelfStops {
+  border: 2px solid #1ec28b;
+  margin-top: 8px;
+  /* width: 540px; */
+  height: 63px;
+  margin-left: 16px;
+  border-radius: 10px;
+}
+
+.destinationSelfButton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 60px;
+  margin-right: 102px;
+}
+
+.destinationSelfBtn {
+  background-color: #1ec28b !important;
+  color: white !important;
+  font-size: 13px !important;
+  border-radius: 15px !important;
+}
+
+.destinationSelfButtonMaxChar {
+  /* margin-left: 70%; */
+  margin-top: 6px !important;
+  color: hotpink;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 102px;
+}
+
+.destinationSelfDestination {
+  /* margin-top: 60px !important; */
+  margin-left: -83px !important;
+  text-align: center;
+  font-size: 17px;
+}
+
+.destinationSelfDestinationSelect {
+  margin-left: 110px !important;
+  width: 86% !important;
+  margin-top: 15px !important;
+  margin-bottom: 30px;
+}
+
+.destinationSelfPreferedLanguage {
+  /* width: 200px; */
+  margin-left: 68px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.destinationSelfInputLanguage {
+  width: 84%;
+  margin-left: 68px !important;
+}
+
+.destinationSelfMandatory {
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 60px;
+  color: grey;
+  margin-bottom: 20px;
+  width: 200px !important;
+  margin-left: 56px;
+}
+
+.css-1w79hki-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: 2px solid #1ec28b !important;
+}
+.css-1w79hki-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.css-1a1fmpi-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.css-1a1fmpi-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid #1ec28b !important;
+}
+.css-uy64dn-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.css-uy64dn-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+  border-bottom: 2px solid #1ec28b !important;
+}
+
+.MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  /* border: #1ec28b 2px solid !important; */
+  border-radius: 4px !important;
+  /* margin-top: 10px; */
+  /* height: 54px; */
+}
+
+/* svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    fill: pink;
+    font-size: 47px;
+    margin-top: -12px !important;
+} */

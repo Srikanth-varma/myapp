@@ -1,0 +1,172 @@
+.connectpeole-main {
+  display: flex;
+}
+/* heading text */
+
+.connectpeopleHeading {
+  font-weight: 700;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: initial;
+  margin-left: 135px;
+}
+
+.connectpeopleHeadingText {
+  font-family: sans-serif;
+  text-align: initial;
+  margin-left: 120px;
+  font-size: 28px;
+  font-weight: 500;
+  width: 1020px;
+  line-height: 2;
+}
+
+.connectpeopleImage {
+  width: 82%;
+  margin-bottom: 5%;
+  box-shadow: 0px 10px 1px -1px #1ec28b !important;
+}
+
+/* Card section */
+
+.connectpeople-container {
+  height: 200px;
+  width: 330px;
+}
+
+.connectpeople-inner {
+  height: 189px;
+  width: 200px;
+  /* background: #1ec; */
+  background: rgb(30 194 139 / 60%);
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  margin-left: 21%;
+  margin-top: 1%;
+}
+
+.connectpeople-MainCard {
+  margin-top: 50px !important;
+}
+
+.connectpeople-Card {
+  display: inline-block;
+  width: 80% !important;
+  margin-bottom: 85px;
+  height: auto;
+  /* box-shadow: 0px 15px 1px -1px rgb(0 0 0 / 20%) */
+  box-shadow: 0px 10px 1px -1px #164938 !important;
+}
+
+.connectpeople-contentCat {
+  font-size: x-large;
+  margin-right: 114px;
+  font-family: sans-serif;
+}
+
+.loadMoreReasultsDiv {
+  margin-bottom: 65px;
+  margin-left: 20px;
+}
+.loadMoreText{
+  margin-bottom: 35px;
+}
+.loadmoreDiv{
+  margin-left: 395px;
+}
+.searchResultsHeading {
+  display: flex;
+
+  margin-top: 40px;
+  margin-bottom: -20px;
+  /* font-size: bold; */
+  font-weight: 600;
+}
+
+.contentPeopleJohn {
+  font-size: x-large;
+  margin-right: 145px;
+  font-family: sans-serif;
+}
+
+.contentPeoplePraveen {
+  font-size: x-large;
+  margin-right: 153px;
+  font-family: sans-serif;
+}
+
+.contentPeopleVinsent {
+  font-size: x-large;
+  margin-right: 201px;
+  font-family: sans-serif;
+}
+
+.connectpeople-contentplaceOffer {
+  font-size: 14px;
+  font-family: sans-serif;
+  width: 198px;
+  margin-left: 7px;
+  margin-top: -6px;
+}
+
+.connectpeople-contentplaceExpected {
+  font-size: 14px;
+  font-family: sans-serif;
+  width: 225px;
+  margin-left: 7px;
+  margin-top: -6px;
+}
+
+.connectpeople-img {
+  height: 159px;
+  /* margin-left: 8px; */
+  padding-top: 15px;
+  /* padding-left: 10px; */
+  border-radius: inherit;
+}
+
+.connectpeople-date {
+  font-size: 22px;
+}
+
+.connectpeople-cardPara {
+  font-size: 15px;
+  text-align: start;
+  margin-left: 25px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 279px;
+}
+
+.connectpeople-cardButton {
+  background-color: #1ec28b !important;
+  color: white !important;
+  border: none !important;
+  width: 120px !important;
+  height: 40px !important;
+  font-size: 15px !important;
+  margin-top: 16px !important;
+  border-radius: 9px !important;
+}
+
+.connectpeople-cardButtonText {
+  color: white !important;
+  text-decoration: none !important;
+}
+/* Load more Results */
+.LoadmoreResults {
+  margin-bottom: 40px;
+  font-family: sans-serif;
+}
+.languageDiv{
+  display: flex;
+  margin-left: 20px;
+}
+.languageText{
+ margin-top: 0px !important;
+ margin-left: 5px;
+}
+.LanguageRoundedIconConnectCard{
+  color: #1ec28b !important;
+}

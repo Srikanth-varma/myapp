@@ -1,0 +1,133 @@
+.FAQHeading {
+  font-size: 28px;
+  margin-top: 60px !important;
+  margin-left: -18px !important;
+  color: rgba(0, 0, 0, 80%);
+}
+.helpText {
+  font-size: 30px;
+  margin-left: 50px;
+}
+.searchContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -75px;
+  margin-bottom: 65px;
+}
+
+#filter {
+  height: 20px;
+}
+.FAQsearchIcon {
+  color: #1ec28b;
+  margin-left: 125px;
+  font-size: 33px !important;
+  position: absolute;
+  margin-top: -42px;
+}
+.accordion {
+  background-color: rgb(30, 194, 139, 5%);
+  width: 55rem;
+  height: auto;
+  padding: 30px;
+  /* margin-left: -86px; */
+  margin-bottom: 50px;
+}
+.FAQhr {
+  width: 95%;
+  border-color: #1ec28b !important;
+}
+.sideMenu {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  line-height: 3;
+  width: 330px;
+}
+/* #filter {
+  height: 10px !important;
+
+} */
+.tabPanelBox {
+  display: flex;
+  margin-left: 6rem;
+}
+.FAQAccountSettings {
+  font-size: 23px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 80%);
+  height: auto;
+  margin-left: 7px;
+}
+.ggProfile {
+  color: #1ec28b !important;
+  font-size: 25px;
+  margin-top: 8px;
+}
+.connectedFilled {
+  color: #1ec28b !important;
+  font-size: 25px;
+  margin-top: 8px;
+  margin-left: -80px;
+}
+.hourGlassStart {
+  color: #1ec28b !important;
+  font-size: 22px;
+  margin-top: 8px;
+  margin-left: -18px;
+}
+
+.contactIcon {
+  display: flex;
+  justify-content: end;
+  margin-right: 70px;
+  padding-right: 21px;
+}
+
+.connecttedIcon {
+  display: flex;
+  justify-content: end;
+  margin-right: 70px;
+  padding-right: 87px;
+}
+.gettingStarted {
+  display: flex;
+  justify-content: end;
+  margin-right: 70px;
+  padding-right: 45px;
+}
+.gettingStartedIcon {
+  color: #1ec28b !important;
+  font-size: 25px;
+  margin-top: 21px;
+}
+.payment {
+  display: flex;
+  justify-content: end;
+  margin-right: 70px;
+  padding-right: 109px;
+}
+
+div:focus {
+  background-color: rgb(30, 194, 139, 5%);
+}
+
+.tabPanelAccount {
+  color: #000000 !important;
+}
+
+.tabsColor {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: baseline !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #1ec28b !important;
+  border-width: 1px !important;
+}

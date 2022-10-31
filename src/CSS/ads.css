@@ -1,0 +1,64 @@
+.ads-box{
+    border: 2px solid pink !important;
+    width: 65% !important;
+    /* height: 1050px !important; */
+    height: auto !important;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    /* margin-left: 60px !important; */
+    margin-top: 37px;
+    margin: auto;
+}
+
+.ads-headingText{
+    color: #000000;
+  font-size: 45px;
+}
+
+
+.ads-mainPage{
+    justify-content: space-evenly;
+}
+
+.ads-Text{
+    display: flex;
+    margin-top: 20px;
+    color: #1ec28b;
+   
+}
+
+.ads-code{
+    justify-content: flex-start;
+    display: flex;
+    width: 163px;
+    margin-left: 103px;
+}
+
+.ads-phone{
+    width: 722px;
+}
+
+.ads-PhoneText{
+    display: flex;
+    margin-top: 30px;
+    color: #1ec28b;
+    margin-left: 102px;
+}
+
+.ads-CaptchaLabel{
+    margin: 17px !important;
+}
+
+.ads-Captcha{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px !important;
+}
+
+.ads-btn{
+    margin-top: 6px !important;
+    margin-bottom: 25px !important;
+    background: #1ec28b !important;
+    width: 425px;
+}
+

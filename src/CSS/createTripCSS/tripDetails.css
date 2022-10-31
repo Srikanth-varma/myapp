@@ -1,0 +1,309 @@
+.tripDetailHeading {
+  font-family: sans-serif;
+  /* box-shadow: 0px 3px 1px -1px #1ec28b !important; */
+  /* width: 560px; */
+  margin-bottom: 30px;
+  /* margin-top: 100px; */
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 48px;
+}
+
+.tripDetailStep {
+  color: grey;
+  /* margin-bottom: 30px; */
+  margin-top: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 48px;
+}
+
+.tripDetailhrlines {
+  background: #1ec28b;
+  width: 90%;
+  height: 2px;
+  margin-top: -6px;
+  margin-left: 49px;
+  margin-bottom: -37px;
+}
+
+.tripDetailPageContainer {
+  display: contents !important;
+}
+
+.tripDetailNameInput {
+  width: 178%;
+  margin-left: 27px !important;
+  margin-top: 50px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.tripdetailNameInputMaxChar{
+    margin-left: 65%;
+    margin-top: 6px;
+    color: hotpink;
+    font-size: 13px;
+}
+
+.tripdetailAssistance {
+  margin-left: 27px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.tripdetaildescription {
+  /* width: 560px; */
+  width: 178%;
+  height: 50px !important;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 27px;
+  border: 1px solid #1ec28b;
+  font-size: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+.tripdetailShortDesc{
+    margin-left: 27px;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+.tripdetailShortDescText{
+    /* width: 560px; */
+    width: 178%;
+    height: 100px !important;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 27px;
+    border: 1px solid #1ec28b;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .tripdetailShortDescMaxChar{
+    margin-left: 65%;
+    margin-top: 6px;
+    color: hotpink;
+    font-size: 13px;
+  }
+
+  .tripDetailMeetNamelabel {
+    font-family: sans-serif !important;
+    font-size: 18px !important;
+    margin-left: 38px;
+    color: black !important;
+    margin-top: 10px;
+  }
+  
+  .tripDetailMeetInput {
+    width: 170%;
+    margin-left: 51px;
+    margin-top: 34px !important;
+  }
+
+.tripdetailAmount {
+  /* width: 300px; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.css-wgai2y-MuiFormLabel-asterisk {
+  color: pink;
+}
+
+.tripdetailSelect {
+  /* width: 500%; */
+  margin-left: 30px;
+  height: 90%;
+  border: 1px solid #1ec;
+}
+
+.tripDetailMandatory {
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 60px;
+  color: grey;
+  margin-bottom: 20px;
+  width: 200px !important;
+  margin-left: 56px;
+}
+
+.tripDetailCheckBox{
+    margin-top: 25px;
+    color: grey;
+    margin-bottom: 55px;
+    margin-left: 52px;
+}
+
+label+.css-407ebk-MuiInputBase-root-MuiInput-root {
+  margin-top: 40px !important;
+}
+
+
+
+
+
+/* ------------------------TRIP-DETAILS-SELF--------------------------------------- */
+
+.tripDetailselfHeading {
+  font-family: sans-serif;
+  /* box-shadow: 0px 3px 1px -1px #1ec28b !important; */
+  /* width: 560px; */
+  margin-bottom: 30px;
+  /* margin-top: 100px; */
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 48px;
+}
+
+.tripDetailselfStep {
+  color: grey;
+  /* margin-bottom: 30px; */
+  margin-top: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 48px;
+}
+
+.tripDetailselfhrlines {
+  background: #1ec28b;
+  width: 90%;
+  height: 2px;
+  margin-top: -6px;
+  margin-left: 49px;
+  margin-bottom: -37px;
+}
+
+.tripDetailselfPageContainer {
+  display: contents !important;
+}
+
+.tripDetailselfNameInput {
+  width: 178%;
+  margin-left: 27px !important;
+  margin-top: 50px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.tripDetailselfNameInputMaxChar {
+  margin-left: 75%;
+  margin-top: 6px;
+  color: hotpink;
+  font-size: 13px;
+}
+
+.tripDetailselfAssistance {
+  margin-left: 27px;
+  margin-top: 15px;
+}
+
+.tripDetailselfdescription {
+  /* width: 560px; */
+  width: 178%;
+  height: 50px !important;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 27px;
+  border: 1px solid #1ec28b;
+  font-size: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.tripDetailselfShortDesc {
+  margin-left: 27px;
+  margin-top: 15px;
+}
+
+.tripDetailselfShortDescText {
+  /* width: 560px; */
+  width: 178%;
+  height: 100px !important;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 27px;
+  border: 1px solid #1ec28b;
+  font-size: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.tripDetailselfShortDescMaxChar {
+  margin-left: 75%;
+  margin-top: 6px;
+  color: hotpink;
+  font-size: 13px;
+}
+.tripDetailselfMeetNamelabel {
+  font-family: sans-serif !important;
+  font-size: 18px !important;
+  margin-left: 38px;
+  color: black !important;
+  margin-top: 10px;
+}
+
+.tripDetailselfMeetInput {
+  width: 170%;
+  margin-left: 51px;
+  margin-top: 34px !important;
+}
+
+.tripDetailselfCanAssistNamelabel {
+  font-family: sans-serif !important;
+  font-size: 18px !important;
+  margin-left: 38px;
+  color: black !important;
+  margin-top: 10px;
+}
+
+.tripDetailselfCanAssistInput {
+  width: 170%;
+  margin-left: 51px;
+  margin-top: 34px !important;
+}
+
+.tripDetailselfInputLanguage {
+  width: 84%;
+  margin-left: 49px !important;
+}
+
+.tripDetailselfAmount {
+  /* width: 300px; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.css-wgai2y-MuiFormLabel-asterisk {
+  color: pink;
+}
+
+.tripDetailselfSelect {
+  /* width: 500%; */
+  margin-left: 30px;
+  height: 90%;
+  border: 1px solid #1ec;
+}
+
+.tripDetailselfMandatory {
+  font-family: sans-serif;
+  font-size: 15px;
+  margin-top: 60px;
+  color: grey;
+  margin-bottom: 20px;
+  width: 200px !important;
+  margin-left: 56px;
+}
+
+.tripDetailselfCheckBox {
+  margin-top: 25px;
+  color: grey;
+  margin-bottom: 55px;
+  margin-left: 52px;
+}

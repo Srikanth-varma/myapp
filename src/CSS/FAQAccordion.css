@@ -1,0 +1,29 @@
+.accordionTitle {
+  display: flex;
+  font-size: 25px;
+  line-height: 2;
+  font-weight: 500;
+  
+}
+.accordionContent {
+  display: flex;
+  font-size: 23px;
+  margin-left: 27px;
+  line-height: 2;
+  font-weight: 450;
+  margin-top: 25px;
+  text-align: initial;
+}
+.plusMinusIcon {
+  
+  color: #1ec28b;
+  font-size: 30px !important;
+}
+.accordionIcons {
+  margin-left: auto;
+  margin-right: 65px;
+  margin-top: 10px;
+}
+.sideMenuAccordionContainer {
+  margin-top: 80px !important;
+}

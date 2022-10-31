@@ -1,0 +1,86 @@
+.aboutusHeadingText {
+    font-size: 25px !important;
+    margin-left: -165px !important;
+  }
+  .aboutFlightImg {
+    width: 80%;
+    margin-left: 100px;
+  }
+  .travelAboutusContent {
+    display: flex;
+    text-align: initial;
+    margin-left: 35px;
+    font-size: 29px;
+    width: 491px;
+    line-height: 1.9;
+  }
+  .travelAboutusContent2 {
+    text-align: initial;
+    margin-left: 135px;
+    width: 1095px;
+    font-size: 48px !important;
+    line-height: 2;
+  }
+  .TCImages {
+    display: flex;
+    margin-left: 130px;
+  }
+  .TCAboutContentText {
+    display: flex;
+    text-align: initial;
+    margin-left: 135px;
+    margin-top: 80px;
+    font-size: 29px;
+    width: 1037px;
+    line-height: 2;
+  }
+  
+  .aboutImageThree,
+  .aboutImageFive {
+    margin-left: 25px;
+    margin-top: 100px;
+  }
+  
+  .aboutImageFour {
+    margin-left: 25px;
+  }
+  
+  .ImageWidth {
+    width: 95%;
+  }
+  
+  .questionImg {
+    margin-left: 84px;
+    width: 87%;
+  }
+  
+  .aboutusContactBtn {
+    /* display: flex;
+    margin-top: -222px;
+    margin-left: 240px;
+    position: absolute;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 40px !important;
+  
+    border: none; */
+    display: flex;
+    margin-top: -222px;
+    margin-left: 240px;
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 28px !important;
+    border: none;
+  }
+  
+  .leftArrowContactBtnIcon {
+    /* font-size: 47px !important;
+    margin-left: 15px; */
+    font-size: 33px !important;
+    margin-left: 4px;
+
+  }
+  

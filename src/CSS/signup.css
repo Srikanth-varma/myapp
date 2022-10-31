@@ -1,0 +1,387 @@
+.mainSignup {
+  background-color: aliceblue !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+/* full name LABEL and INPUT BOX and error message classes */
+.fullNamelabel {
+  margin-right: 360px;
+  font-weight: 400;
+}
+
+.fullNameInput {
+  width: 80%;
+  padding: 10px;
+  margin-top: 5px !important;
+  margin-left: 7px;
+}
+.fullNameError {
+  margin-right: 230px;
+  color: #ff0000;
+}
+/* create account page container class */
+.signupPageContainer {
+  border: 1px solid #7fbad1;
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 25px;
+  text-align: center;
+  width: "100%";
+}
+
+.planForYouHeading {
+  font-family: sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 90px;
+}
+
+/* classes for Register button */
+.registerBtnMain {
+  margin-top: 0 !important;
+}
+
+.registerBtn {
+  margin-left: 10px;
+  margin-top: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 35px;
+  height: 45px;
+  font-size: 20px;
+  width: 230px;
+  background-color: #1ec28b;
+  color: #ffffff;
+}
+/* class for Form */
+.form {
+  background-color: white;
+  border-radius: 20px;
+  width: 492px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 800px;
+}
+/* classes for IMAGEES */
+.signupFirstimage {
+  width: 87%;
+  margin-top: 142px;
+}
+
+.signupPageSecondimage {
+  width: 100%;
+}
+/* DOB LABEL and INPUT BOX classes */
+
+.dobMain {
+  margin-top: 10px;
+  width: 100% !important;
+  margin-left: 14px;
+}
+.dobLabel {
+  margin-right: 345px;
+}
+.inputDate {
+  width: 81%;
+  padding: 10px;
+  margin-top: 5px !important;
+}
+.ageGroupLabel {
+  margin-right: 347px !important;
+}
+/* classes for gender label,input and error */
+.genderMain {
+  margin-top: 10px;
+  width: 100%;
+  margin-left: 6px;
+}
+.genderLabel {
+  margin-right: 372px;
+  /* width: 80%; */
+}
+.genderInput {
+  padding: 11px;
+  margin-left: 10px !important;
+  margin-top: 5px;
+  /* margin-right: 2px; */
+  height: 58px;
+  width: 79.7%;
+}
+.genderError {
+  margin-right: 230px;
+  color: #ff0000;
+}
+/* classes for mobile label ,input and error */
+
+.mobileMain {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.mobileLabel {
+  margin-right: 325px;
+  font-weight: 400;
+}
+
+.signupmobileInput {
+  width: 68%;
+  padding: 10px;
+  margin-top: 5px !important;
+  margin-left: -2px !important;
+}
+.countryCodeInput{
+  
+  margin-top: 5px !important;
+  background-color: aliceblue;
+  width: 15%;
+
+  
+}
+
+.mobileError {
+  margin-right: 230px;
+  color: #ff0000;
+}
+
+/* classes for location label,input and error */
+.gender_error {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  text-align: left;
+  margin-top: 3px;
+  margin-right: 145px;
+  margin-bottom: 0;
+  margin-left: 14px;
+}
+.countryInput{
+  padding: 11px;
+  margin-left: 60px !important;
+  margin-top: 5px;
+  /* margin-right: 2px; */
+  height: 58px;
+  width: 80%;
+}
+.stateInput{
+  padding: 11px;
+  /* margin-left: 47px !important; */
+  margin-top: 5px;
+  margin-right: 47px;
+  height: 58px;
+  width: 80%;
+}
+.countryLabel{
+  margin-right: 80px;
+}
+.stateLabel{
+  margin-right: 213px;
+}
+.countryGrid{
+
+}
+.stateGrid{
+
+}
+/* .locationMain {
+  margin-top: 10px;
+  width: 100%;
+  margin-left: 18px;
+}
+
+.locationLabel {
+  margin-right: 368px;
+  font-weight: 400;
+}
+
+.locationInput {
+  width: 80.7%;
+  padding: 10px;
+  margin-top: 5px !important;
+}
+
+.locationError {
+  margin-right: 230px;
+  color: #ff0000;
+} */
+/* classes for email label , input and error */
+
+.emailIdMain {
+  margin-top: 10px;
+  margin-left: 17px;
+  width: 100%;
+}
+
+.emailIdLabel {
+  margin-right: 372px;
+  font-weight: 400;
+}
+
+.emailIdInput {
+  width: 80.7%;
+  padding: 10px;
+  margin-top: 5px !important;
+  margin-left: 2px !important;
+}
+
+.emailIdError {
+  margin-right: 230px;
+  color: #ff0000;
+}
+/* classes for password label ,input and error */
+
+.passwordMain {
+  /* margin-top: px; */
+  margin-left: 14px;
+  width: 100%;
+}
+
+.passwordLabel {
+  margin-right: 243px;
+  font-weight: 400;
+}
+
+.passwordInput {
+  width: 79%;
+  padding: 10px;
+  margin-top: 0px !important;
+  margin-left: 10px !important;
+}
+
+.passwordError {
+  color: #ff0000;
+  width: 500px;
+  margin-left: 100px;
+}
+/* classes for Confirm Password label,input and error */
+
+.confirmPasswordMain {
+  margin-top: 10px;
+  margin-left: 19px;
+  width: 100%;
+}
+
+.confirmPasswordSignupLabel {
+  font-weight: 400;
+  margin-right: 197px;
+}
+
+.confirmPasswordInputSignup {
+  width: 81.5%;
+  padding: 10px;
+  margin-left: -2px !important;
+  margin-top: 5px !important;
+}
+
+.confirmPasswordErrorSignup {
+  margin-right: 125px;
+  color: #ff0000;
+}
+/* class for checkbox agreement */
+.agreement {
+  margin-top: 30px;
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 480px) {
+  .signupPageContainer {
+    width: 100% !important;
+    /* margin-left: 27px !important; */
+  }
+  .genderError {
+    margin-right: 140px;
+  }
+  .signupPageSecondimage {
+    width: 80% !important;
+    margin-top: -25px !important;
+    margin-left: 25px !important;
+  }
+  .signupmobileInput {
+    margin-left: 3px !important;
+  }
+  .fullNamelabel{
+    margin-right: 268px !important;
+    font-weight: 400;
+  }
+  .locationLabel {
+    margin-right: 287px !important;
+    font-weight: 400;
+  }
+  .locationInput{
+margin-right: 10px !important;
+  }
+  .confirmPasswordInputSignup {
+    margin-left: -7px !important;
+  }
+  .passwordInput{
+    margin-left: 1px !important;
+  }
+  .emailIdLabel {
+    margin-right: 294px !important;
+  }
+  .emailIdInput{
+    margin-right: 22px !important;
+  }
+  .dobLabel {
+    margin-right: 255px !important;
+  }
+  .inputDate{
+    margin-left: -5px !important;
+ 
+  }
+  .genderLabel {
+    margin-right: 287px !important;
+  }
+  .genderInput{
+    margin-left: 3px !important;
+  }
+  .mobileLabel {
+    margin-right: 245px !important;
+  }
+  .signupmobileInput{
+margin-right: 15px !important;
+  }
+  .emailIdInput {
+    margin-left: 12px !important;
+  }
+  .passwordLabel {
+    margin-right: 166px !important;
+  }
+  .signupFirstimage {
+    width: 100% !important;
+    margin-top: 50px !important;
+  }
+  .confirmPasswordSignupLabel {
+    margin-right: 114px !important;
+  }
+  .planForYouHeading {
+    /* font-family: sans-serif;  */
+    font-style: italic;
+    line-height: 0px !important;
+    margin-top: -30px !important;
+    visibility: hidden !important;
+  }
+  .signupAgreementText{
+    /* background-color: yellow ; */
+    margin-left: -48px !important;
+  }
+  .agreement {
+    /* background-color: #ff0000 !important; */
+    margin-left: 70px !important;
+    color: rgb(181, 181, 181);
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+.socialIcons {
+  /* margin-top: 12px;
+    margin-left: -146px;
+    column-gap: 12px; */
+  display: flex;
+  justify-content: center;
+  padding: 0px 40px;
+}

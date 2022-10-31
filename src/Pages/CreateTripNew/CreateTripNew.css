@@ -1,0 +1,51 @@
+.Steppercaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.subText{
+    overflow-wrap: normal;
+}
+
+.MainText{
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+/*----------------------Traveller Details ---------------------------*/
+.FormHeading{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* .stepper{
+    display: block !important;
+} */
+
+.stepperNextBtn{
+    background-color: #1ec28b !important;
+    color: white !important;
+    margin-left: 0px !important;
+    width: 10% !important;
+    /* margin-top: -59px !important; */
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+.stepperBackBtn{
+    /* margin-left: 400px !important;  */
+    color: black !important;
+    margin-top: 30px !important;
+}
+
+
+@media screen and (max-width: 960px) {
+ /* .stepper{
+    display: block !important;
+}  */
+}

@@ -1,0 +1,251 @@
+.profileEditbox {
+    /* background-color: rgb(30 194 139 / 10%) !important; */
+    height: 1270px;
+    width: 800px;
+    border-radius: 20px;
+    /* margin-left: 50px; */
+    /* margin-left: 30%; */
+    margin-bottom: 30px;
+    border: 1.5px solid pink !important;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .ageGroup {
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 16px;
+  }
+  .gendercontainer{
+    margin-left: 16px!important;
+    width: 100%;
+  }
+  .emailIdContainer{
+    margin-left: 16px!important;
+    width: 100%;
+  }
+  .emailinputField{
+   /* padding: 11px; */
+    margin-left: 3px !important;
+    margin-top: 5px;
+    /* margin-right: 2px; */
+    height: 58px;
+    width: 90%;
+  }
+  
+  .mobileContainer{
+    margin-left: 16px!important;
+    width: 100%;
+  }
+  .mobileinputField{
+    /* padding: 11px; */
+     margin-left: -2px !important;
+     margin-top: 5px !important;
+     /* margin-right: 2px; */
+     height: 58px;
+     width: 76%;
+   }
+  .countyContainer{
+    margin-left: 16px!important;
+    width: 100%;
+  }
+  .countryInputField {
+    padding: 11px;
+    margin-left: 3px !important;
+    margin-top: 5px;
+    /* margin-right: 2px; */
+    height: 58px;
+    width: 90%;
+}
+.stateContainer{
+  margin-left: 16px!important;
+  width: 100%;
+}
+.stateInputField{
+  padding: 11px;
+  margin-left: 3px !important;
+  margin-top: 5px;
+  /* margin-right: 2px; */
+  height: 58px;
+  width: 90%;
+}
+  .profileEditImg {
+    height: 80px;
+    margin-left: -6px;
+    padding-top: 9px;
+    padding-left: 5px;
+    width: 80px;
+    border-radius: inherit
+  }
+  .cardprofile-img-sidebar {
+    height: 110px;
+    padding-top: 20px;
+    border-radius: inherit;
+}
+  .fieldsOuterContainer {
+    /* margin-top: 200px; */
+    text-align: left;
+    line-height: 2;
+  }
+  .profileEditContainer {
+    height: 5px;
+    width: 5px;
+    margin-left: 65px;
+    margin-top: 70px;
+  }
+  .fieldsInnerContainer {
+    margin-top: 125px;
+    width: 100%;
+    margin-left: 48px;
+    margin-right: -20px;
+  }
+  .profileEditInner {
+    height: 100px;
+    width: 100px;
+    background: #1ec28b;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    margin-left: 145%;
+    margin-top: 1%;
+  }
+  .aboutEdit {
+    /* padding: 8px; */
+    height: 120px;
+    margin-top: 55px;
+    width: 90%;
+    border: 1.5px solid #1ec28b !important;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 390;
+    margin-left:16px;
+  }
+  .aboutHeading {
+    font-weight: 400;
+    color: #1ec28b;
+    font-size: 13px;
+    margin-left: 10px;
+  }
+  .aboutContent {
+    margin-left: 10px;
+    line-height: 2;
+  }
+  .saveButton {
+    width: 130px;
+    height: 35px;
+    margin-top: 60px;
+    background-color: #1ec28b;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-right: 65px;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .Name {
+    width: 90%;
+    
+    padding: 0;
+    border-color: #1ec28b !important;
+  }
+  .about_profile{
+    height: 120px!important;
+    /* margin-top: 55px;
+    width: 90%;
+    border: 1.5px solid #1ec28b !important;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 390;
+    margin-left:16px; */
+    width: 90%;
+    
+    padding: 0;
+    border-color: #1ec28b !important;
+  }
+  .Age_Group_input {
+    width: 90%;
+    padding: 0;
+    border-color: #1ec28b !important;
+  }
+  .dobProfileEdit {
+    width: 90%;
+  }
+  
+  /* .dobOuterContainer {
+    margin-top: 20px;
+  }
+  .selectOuterContainer {
+    margin-top: 15px;
+  }
+  .locationOuterContainer {
+    margin-top: 15px;
+  }
+  .mobileOuterContainer {
+    margin-top: 15px;
+  } */
+  .formControl,
+  .mobileInputProfile,
+  .locationInputProfile {
+    width: 90%;
+  }
+  .myProfileHeading {
+    display: flex;
+    margin-left: 25px;
+    margin-bottom: -30px;
+  }
+  .labelNameProfile {
+    /* font-size: 15px; */
+    color: #1ec28b;
+  }
+  .labelageGroupLabel {
+    /* font-size: 15px; */
+    color: #1ec28b;
+  }
+  .labelDOBProfile {
+    font-size: 15px;
+    color: #1ec28b;
+  }
+  .labelSelectProfile {
+    font-size: 15px;
+    color: #1ec28b;
+  }
+  .labelMobileProfile {
+    font-size: 15px;
+    color: #1ec28b;
+  }
+  .labelLocationProfile {
+    font-size: 15px;
+    color: #1ec28b;
+  }
+  .Name ::after,
+  .labelNameProfile,
+  .Name ::before,
+  .labelLocationProfile,
+  .labelMobileProfile,
+  .labelSelectProfile,
+  .labelDOBProfile,
+  .dobProfileEdit ::after,
+  .dobProfileEdit ::before,
+  .mobileInputProfile ::after,
+  .mobileInputProfile ::before,
+  .locationInputProfile ::after,
+  .locationInputProfile ::before,
+  .formControl ::after,
+  .formControl ::before {
+    border-bottom-color: #1ec28b !important;
+    font-size: 15px;
+    color: #1ec28b;
+  }
+  .changePhoto {
+    margin-top: 25px;
+    margin-bottom: -75px;
+    margin-right: 200px;
+  }
+  .plusIcon{
+    font-size: 15px !important;
+    color: #1ec28b;
+  }
+ 
+  

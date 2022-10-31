@@ -1,0 +1,89 @@
+.filter-main {
+  width: 215px;
+  height: auto;
+  border: 1px solid #1ec28b;
+  margin-left: 130px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.filter-second {
+  background: #1ec28b;
+  color: white;
+  display: flex;
+}
+.filter-icon-section {
+  /* margin-left: 55px; */
+  color: #1ec28b !important;
+}
+.filter-text-section {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.filter-listed {
+  /* margin-left: 30px; */
+  width: 180px;
+  display: inline-block !important;
+}
+
+/* .filter-confrimed{
+  margin-top: 10px;
+} */
+
+.airlines-listed {
+  /* margin-left: 35px; */
+  width: 180px;
+  display: inline-block !important;
+}
+
+.tipamt-listed {
+  /* margin-left: 35px; */
+  width: 180px;
+  display: inline-block !important;
+}
+.tip-amt-text {
+  margin-top: -25px;
+  margin-left: 15px;
+}
+.apply-filter-btn {
+  background-color: #1ec28b !important;
+  color: white !important;
+  border: none !important;
+  width: 120px !important;
+  height: 25px !important;
+  font-size: 12px !important;
+  margin-top: 16px !important;
+  border-radius: 5px !important;
+}
+.range-amount {
+  height: 20px;
+  width: 55px;
+  border: 1px solid#1ec28b;
+  margin-top: -43px;
+  border-radius: 8px;
+  margin-left: 100px;
+}
+
+.currency-options {
+  border: 1px solid#1ec28b;
+  width: 55px;
+  height: 22px;
+  border-radius: 8px;
+  margin-left: -85px;
+}
+.travelExploreIcon {
+  /* margin-left: 10;
+  margin-top: 7; */
+  color: #1ec28b !important;
+}
+.bookingStatus {
+  font-size: 18px !important;
+  font-family: sans-serif;
+  /* font-weight: bolder !important; */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.SortSharpIcon{
+  margin-top: 0px !important;
+}

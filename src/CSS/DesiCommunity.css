@@ -1,0 +1,44 @@
+.desiCommunityMainHeading {
+  margin-left: -43px !important;
+  font-size: x-large;
+  font-family: sans-serif !important;
+  font-weight: 500 !important;
+}
+.halfHr {
+  margin-top: -18px !important;
+}
+
+.hrDesi {
+  width: 305px;
+  margin-left: 232px;
+  border: 1px solid rgb(30, 194, 139) !important;
+}
+
+.makeMyMoneyText {
+  width: 964px;
+  margin-left: 180px;
+  font-size: 28px;
+  display: flex;
+  text-align: initial;
+  line-height: 2;
+}
+
+.globeFlightImageDesi {
+  width: 500px;
+}
+
+.itServiceDestText {
+  width: 977px;
+  display: flex;
+  text-align: initial;
+  line-height: 2;
+  margin-left: 180px;
+  font-size: 28px;
+}
+
+.ruReadyImg {
+  width: 80%;
+  margin-left: 68px;
+}
+
+

@@ -1,0 +1,152 @@
+.connectedListBox{
+    background-color: rgb(30 194 139 / 10%) !important;
+    height: 630px;
+    width: 700px;
+    margin: auto;
+    margin-top: -25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.connectedListText{
+    text-align: start;
+    margin-left: 35px;
+    padding-top: 34px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+
+.connectedListsearchbtn {
+    border: 2px solid #1ec28b;
+    width: 88%;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 25px;
+    /* margin-left: -94px; */
+}
+
+
+.connectedListsearchbtnicon {
+  margin-left: -40px !important;
+  color: #1ec28b !important;
+}
+
+
+.messageContainer{
+display: flex !important;
+flex-direction: column !important;
+/* align-items: center; */
+}
+
+.messageGrid{
+    margin-top: 10px;
+}
+
+.conncetedListbox {
+    line-height: 1;
+    background-color: white;
+    width: 595%;
+    height: 75px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border: 1.5px solid #1ec28b !important;  
+    padding-top: 4px;
+}
+
+.messageImg{
+    height: 52px;
+    margin-left: -6px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.messagecontainer {
+    height: 5px;
+    width: 5px;
+    margin-left: 18px;
+    margin-top: 2px;
+
+}
+
+.messageinner {
+    height: 62px;
+    width: 65px;
+    background: white;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    margin-left: 145%;
+    margin-top: 1%;
+    border: 1.5px solid #1ec28b !important;   
+}
+
+.messageThara{
+    font-family: sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    margin-left: -116px !important;
+}
+
+.connectedListTharaText{
+    font: menu !important;
+    margin-left: -182px !important;
+    padding-top: 10px;
+
+}
+
+.connectedListProfile{
+    background-color: #1ec28b;
+    color: white;
+    width: 87px;
+    margin-left: 78%;
+    margin-top: -35px;
+    border-radius: 7px;
+    height: 19px;
+    padding-top: 3px;
+}
+
+.messageAbdul{
+    font-family: sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    margin-left: -84px !important;
+   
+}
+
+.connectedListAbdulText{
+    font: menu !important;
+    margin-left: -168px !important;
+    padding-top: 10px;
+
+}
+
+.messagePallavi{
+    font-family: sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    margin-left: -133px !important;
+}
+
+.sentListPallaviText{
+    font: menu !important;
+    margin-left: -181px !important;
+    padding-top: 10px;
+
+}
+.messageKoushik{
+    font-family: sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    margin-left: -59px !important;
+}
+
+.connectedListKoushikText{
+    font: menu !important;
+    margin-left: -173px !important;
+    padding-top: 10px;
+
+}
