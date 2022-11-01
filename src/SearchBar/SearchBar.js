@@ -36,16 +36,16 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import moment from "moment/moment";
 import axios from "axios";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 // import Select from '@material-ui/core/Select';
-const useStyles = makeStyles({
-  paper: {
+// const useStyles = makeStyles({
+//   paper: {
    
-    width:"450px",
-    // textAlign:"center"
-  },
+//     width:"450px",
+//     // textAlign:"center"
+//   },
  
-});
+// });
 const SearchBar = ({mySearchData}) => {
   const [fromDate, setFromDate] = React.useState(null);
   const [toDate, setToDate] = React.useState(null);
@@ -154,7 +154,7 @@ const validationSchema = Yup.object({
   const mycountry=CountryJson;
 
 
-const classes = useStyles();
+// const classes = useStyles();
   return (
     <>
       <Container>
@@ -225,7 +225,7 @@ const classes = useStyles();
                           // getOptionSelected={(option)=> option.city && option.name && option.iata_code && option.country }
                           getOptionLabel={(option) => `${option.city},${option.country}(${option.iata_code}-${option.name})`}
                           style={{ width: 200 }}
-                          classes={{ paper: classes.paper }}
+                          // classes={{ paper: classes.paper }}
                           // value={air}
                           renderOption={(props, option) => (
                             <Box
@@ -370,7 +370,7 @@ return true
                           // getOptionSelected={(option)=> option.city && option.name && option.iata_code && option.country }
                           getOptionLabel={(option) => `${option.city},${option.country}(${option.iata_code}-${option.name})`}
                           style={{ width: 200 }}
-                          classes={{ paper: classes.paper }}
+                          // classes={{ paper: classes.paper }}
                           // value={air}
                          
                           renderOption={(props, option) => (
