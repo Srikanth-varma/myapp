@@ -46,7 +46,7 @@ import axios from "axios";
 //   },
  
 // });
-const SearchBar = ({mySearchData}) => {
+const SearchBar = ({mySearchData,mySearchDataError}) => {
   const [fromDate, setFromDate] = React.useState(null);
   const [toDate, setToDate] = React.useState(null);
   // const [value1, setValue1] = React.useState(null);
@@ -123,7 +123,7 @@ const validationSchema = Yup.object({
       console.log(values)
       // console.log(JSON.stringify(values))
       // dispatch(login(values.email, values.password))
-
+      mySearchData([]);
       axios
       .get(`http://ec2-54-185-6-32.us-west-2.compute.amazonaws.com:81/search?flying_from=${values.flyingFrom}&destination=${values.Destination}&category=${values.Category}&date_range_from=${fromdate}&date_range_to=${todate}`)
       .then((response) => {
@@ -140,6 +140,7 @@ const validationSchema = Yup.object({
             // The request was made and the server responded with a status code
             // that falls out of the range of 2xx
             console.log(error.response.data);
+            mySearchDataError(error.response.data.message);
             // console.log(error.response.status);
             // console.log(error.response.headers);
             
@@ -308,6 +309,7 @@ return true
                    
                   {/* </Paper> */}
                   <span
+                  // style={{fontSize:"smaller"}}
                           id="errormessage"
                           className="loginEmailError"
                         >{formik.touched.flyingFrom && formik.errors.flyingFrom}</span>

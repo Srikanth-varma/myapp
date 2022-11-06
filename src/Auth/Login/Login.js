@@ -99,7 +99,7 @@ function Login(props) {
           <Grid item xs={12} md={6} lg={6} sm={12} xl={6}>
             <div>
               <img
-                src="./assests/images/TravelCompanion Logo PNG.png"
+                src="./Assets/Images/TravelCompanion Logo PNG.png"
                 alt="first"
                 className="travelCompanionImg"
               />
@@ -107,7 +107,7 @@ function Login(props) {
 
             <div>
               <img
-                src="./assests/images/Login Illustraion Image PNG - Copy.png"
+                src="./Assets/Images/Login Illustraion Image PNG - Copy.png"
                 alt="first"
                 className="loginsecondimg"
               />

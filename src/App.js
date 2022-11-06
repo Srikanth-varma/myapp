@@ -39,7 +39,7 @@ import PrivacyPolicy from "./FAQandPrivacyPolicy/PrivacyPolicy";
 import DesiCommunity from "./DesiCommunity/DesiCommunity";
 import ContactUs from "./Pages/ContactUS/ContactUs";
 import Ads from "./Pages/AdsPage/Ads";
-// srikanth
+
 function App() {
   const { auth } = useSelector((state) => state);
   return (

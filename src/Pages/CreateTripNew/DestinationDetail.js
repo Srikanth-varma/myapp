@@ -707,7 +707,7 @@ function StartTrip(props) {
                     <DatePicker
                       // disableFuture
                       name="date_range_from"
-                      inputFormat="DD-MM-yyyy"
+                      inputFormat="DD-MMM-yyyy"
                       value={value}
                       onChange={(newValue) => {
                         setValue(name, newValue.format("YYYY-MM-DD"));
@@ -742,7 +742,7 @@ function StartTrip(props) {
                     control={control}
                     render={({ field: { ref, value, name, ...rest } }) => (
                       <DatePicker
-                        inputFormat="DD-MM-yyyy"
+                        inputFormat="DD-MMM-yyyy"
                         value={value}
                         onChange={(newValue) => {
                           setValue(name, newValue);
@@ -967,12 +967,12 @@ function StartTrip(props) {
                   render={({ field: { ref, value, name, ...rest } }) => (
                     <DatePicker
                       name="departing_on"
-                      inputFormat="DD/MM/yyyy"
+                      inputFormat="DD-MMM-yyyy"
                       value={value}
                       onChange={(newValue) => {
                         setValue(
                           "departing_onn",
-                          newValue.format("DD/MM/YYYY")
+                          newValue.format("DD-MMM-YYYY")
                         );
                         setValue(name, newValue);
                       }}

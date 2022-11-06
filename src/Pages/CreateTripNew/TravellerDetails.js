@@ -26,17 +26,53 @@ import {
 import { pink } from "@mui/material/colors";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import { Controller, useForm } from "react-hook-form";
-import UploadPhoto from "./UploadPhoto";
+import { useSelector,useDispatch } from "react-redux";
+import axios from "axios";
 
 function TravellerDetails(props) {
+  const { isLoggedIn,user } = useSelector(state => state.auth);
+  // console.log("user_id",user.user_id)
+
+  const [profileData,setProfileData]=useState({});
+  useEffect(
+  ()=>{
+    axios
+    .get(`http://ec2-54-185-6-32.us-west-2.compute.amazonaws.com:81/user/profile/${isLoggedIn?user.user_id:null}/`)
+    .then((response) => {
+      console.log(response,"profile response")
+      
+        if (response.data) {
+     
+         console.log(response.data,"profile response data");
+         setProfileData(response.data[0]);
+      
+        }
+  
+      
+    }) .catch((error) => {
+      // Error
+      if (error.response.status===400) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        
+      }
+  })
+  }
+  ,[])
+
+
+
   const { control, values, setValue, errors, register } = props;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     if (name === "user_type" && value === "1") {
-      setValue("age_group", "20-25");
-      setValue("name", "Laksha");
-      setValue("gender", "female");
+      setValue("age_group", profileData.age_group);
+      setValue("name", profileData.full_name);
+      setValue("gender", profileData.gender);
       setValue("booking_status", "1");
       setValue("date_range_from", null);
       setValue("date_range_to", null);
@@ -133,17 +169,17 @@ function TravellerDetails(props) {
                   : "travellerdNeed"
               }
             >
-              <p className="travellerdNeedText">Need a Travel Companion</p>
+              <p className="travellerdNeedText">Need a Travell Companion</p>
             </Card>
           </div>
           <div>
             <Card
               onClick={() => {
                 setValue("category", "1");
-                setValue("age_group", "20-25");
-                setValue("name", "Laksha");
-                setValue("gender", "female");
-                setValue("booking_status", "1");
+                setValue("age_group", profileData.age_group);
+                setValue("name", profileData.full_name);
+                setValue("gender",profileData.gender);
+                setValue("booking_status", "2");
                 setValue("tip_expected", "");
               }}
               className={
@@ -152,7 +188,7 @@ function TravellerDetails(props) {
                   : "travellerdNeed"
               }
             >
-              <p className="travellerdCompanionText">I am Travel Companion</p>
+              <p className="travellerdCompanionText">I am Travell Companion</p>
             </Card>
           </div>
         </div>
@@ -211,50 +247,27 @@ function TravellerDetails(props) {
           </div>
           <div className="travellercontainer">
             <div className="travellerinner">
-              {/* <div lg={6} className="travellerchangePhoto">
-                <input
-                  accept="image/*"
-                  style={{ display: "none" }}
-                  id="icon-button-file"
-                  type="file"
+              <div lg={6} className="travellerchangePhoto">
+                <Controller
+                  name="photo"
+                  control={control}
+                  render={({ field: { onChange, value, name } }) => (
+                    <>
+                      {values.category === "2" && values.user_type === "2" && (
+                        <input
+                          accept="image/*"
+                          id="icon-button-file"
+                          type="file"
+                          onChange={(e) => {
+                            console.log(e.target.files[0], "pricture");
+                            setValue("photo", e.target.files[0]);
+                          }}
+                        />
+                      )}
+                    </>
+                  )}
                 />
-                <label htmlFor="icon-button-file">
-                  <IconButton
-                    color="primary"
-                    aria-label="upload picture"
-                    component="span"
-                    style={{ fontSize: 15 }}
-                  >
-                    
-                    <PermIdentityIcon className="travellerImg" color="action" />
-                    <AddCircleOutlinedIcon
-                      className="travellerIcon"
-                      // style={{ marginTop: 30, marginLeft: -9 }}
-                    />
-                  </IconButton>
-                </label>
-              </div> */}
-              <Controller
-                name="photo"
-                control={control}
-                render={({ field: { onChange, value, name } }) => (
-                  // <UploadPhoto
-                  //   OnChange={(e) => {
-                  //     setValue("profilepic", e.target.files[0]);
-                  //   }}
-                  //   value={value}
-                  // />
-                  <input
-                    accept="image/*"
-                    id="icon-button-file"
-                    type="file"
-                    onChange={(e) => {
-                      console.log(e.target.files[0],"pricture")
-                      setValue("photo", e.target.files[0]);
-                    }}
-                  />
-                )}
-              />
+              </div>
             </div>
           </div>
         </div>
@@ -281,109 +294,161 @@ function TravellerDetails(props) {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
-            <FormControl fullWidth>
-              <InputLabel
-                id="demo-simple-select-label"
-                className="travellerAgeNamelabel"
-              >
-                Age Group
-                <span style={{ color: "hotpink", fontSize: 19 }}>*</span>
-              </InputLabel>
-              <Controller
-                name="age_group"
-                control={control}
-                defaultValue=""
-                render={({ field: { onChange, value } }) => (
-                  <Select
-                    labelId="demo-simple-select-label"
-                    variant="standard"
-                    id="demo-simple-select"
-                    value={value}
-                    label="Age"
-                    onChange={onChange}
-                    className="travellerAgeInput"
-                    sx={{
-                      ".MuiSelect-icon": {
-                        color: "pink",
-                        fontSize: "xx-large",
-                      },
-                      ".MuiSelect-outlined": {
-                        color: "green",
-                      },
-                    }}
-                  >
-                    {ageGroup.map((c, i) => (
-                      <MenuItem key={`c-${i}`} value={c.id}>
-                        {c.name}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                )}
-              />
-              <div style={{ color: "red", textAlign: "end" }}>
+          {/* ----------------------------- Age Field start ---------------------------------------- */}
+
+          {values.category === "2" && values.user_type === "2" ? (
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth>
+                <InputLabel
+                  id="demo-simple-select-label"
+                  className="travellerAgeNamelabel"
+                >
+                  Age Group
+                  <span style={{ color: "hotpink", fontSize: 19 }}>*</span>
+                </InputLabel>
+                <Controller
+                  name="age_group"
+                  control={control}
+                  defaultValue=""
+                  render={({ field: { onChange, value } }) => (
+                    <Select
+                      labelId="demo-simple-select-label"
+                      variant="standard"
+                      id="demo-simple-select"
+                      value={value}
+                      label="Age"
+                      onChange={onChange}
+                      className="travellerAgeInput"
+                      sx={{
+                        ".MuiSelect-icon": {
+                          color: "pink",
+                          fontSize: "xx-large",
+                        },
+                        ".MuiSelect-outlined": {
+                          color: "green",
+                        },
+                      }}
+                    >
+                      {ageGroup.map((c, i) => (
+                        <MenuItem key={`c-${i}`} value={c.id}>
+                          {c.name}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  )}
+                />
+               <div style={{ color: "red", textAlign: "end" }}>
                 {errors.age_group && errors.age_group.message}
               </div>
-            </FormControl>
-          </Grid>
+              </FormControl>
+            </Grid>
+          ) : (
+            <Grid item xs={12} sm={6}>
+              <div>
+                <Controller
+                  name="age_group"
+                  control={control}
+                  render={({ field: { onChange, value, name } }) => (
+                    <TextField
+                      onChange={onChange}
+                      value={value}
+                      label={"age_group"}
+                      name={name}
+                      className="travellerfullNameInput"
+                      variant="standard"
+                      color="success"
+                      focused
+                    />
+                  )}
+                />
+              </div>
+            </Grid>
+          )}
+          {/* ----------------------------- Age Field start ---------------------------------------- */}
 
-          <Grid item xs={12}>
-            <FormControl fullWidth style={{ marginTop: -11 }}>
-              <InputLabel
-                id="demo-simple-select-label"
-                className="travellerGenderNamelabel"
-              >
-                Gender
-                <span style={{ color: "hotpink", fontSize: 19 }}>*</span>
-              </InputLabel>
-              <Controller
-                render={({ field: { onChange, value } }) => (
-                  <Select
-                    labelId="demo-simple-select-label"
-                    variant="standard"
-                    id="demo-simple-select"
-                    value={value}
-                    label="Gender"
-                    onChange={onChange}
-                    className="travellerGenderInput"
-                    sx={{
-                      ".MuiSelect-icon": {
-                        color: "pink",
-                        fontSize: "xx-large",
-                      },
-                      ".MuiSelect-outlined": {
-                        color: "green",
-                      },
-                    }}
-                  >
-                    {/* <MenuItem value={10}>Male</MenuItem>
-                    <MenuItem value={20}>Female</MenuItem> */}
-                    {/* <MenuItem value={30}>Other</MenuItem> */}
-                    {genderGroup.map((c, i) => (
-                      <MenuItem key={`c-${i}`} value={c.id}>
-                        {c.name}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                )}
-                control={control}
-                name="gender"
-                defaultValue=""
-              />
-              <div
+          {/* ----------------------------- Gender Field start ---------------------------------------- */}
+
+          {values.category === "2" && values.user_type === "2" ? (
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+                <InputLabel
+                  id="demo-simple-select-label"
+                  className="travellerGenderNamelabel"
+                >
+                  Gender
+                  <span style={{ color: "hotpink", fontSize: 19 }}>*</span>
+                </InputLabel>
+                <Controller
+                  render={({ field: { onChange, value } }) => (
+                    <Select
+                      labelId="demo-simple-select-label"
+                      variant="standard"
+                      id="demo-simple-select"
+                      value={value}
+                      label="Gender"
+                      onChange={onChange}
+                      className="travellerGenderInput"
+                      sx={{
+                        ".MuiSelect-icon": {
+                          color: "pink",
+                          fontSize: "xx-large",
+                        },
+                        ".MuiSelect-outlined": {
+                          color: "green",
+                        },
+                      }}
+                    >
+                      {/* <MenuItem value={10}>Male</MenuItem>
+                  <MenuItem value={20}>Female</MenuItem> */}
+                      {/* <MenuItem value={30}>Other</MenuItem> */}
+                      {genderGroup.map((c, i) => (
+                        <MenuItem key={`c-${i}`} value={c.id}>
+                          {c.name}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  )}
+                  control={control}
+                  name="gender"
+                  defaultValue=""
+                />
+                <div
                 style={{ color: "red", textAlign: "center", marginLeft: -206 }}
               >
                 {errors.gender && errors.gender.message}
               </div>
-            </FormControl>
-          </Grid>
+              </FormControl>
+            </Grid>
+          ) : (
+            <Grid item xs={12} sm={6}>
+              <div>
+                <Controller
+                  name="gender"
+                  control={control}
+                  render={({ field: { onChange, value, name } }) => (
+                    <TextField
+                      onChange={onChange}
+                      value={value}
+                      label={"gender"}
+                      name={name}
+                      className="travellerfullNameInput"
+                      variant="standard"
+                      color="success"
+                      focused
+                    />
+                  )}
+                />
+              </div>
+            </Grid>
+          )}
+          {/* ----------------------------- Gender Field start ---------------------------------------- */}
 
           {values.category === "1" && (
-            <Grid item xs={12}>
-              <FormControl fullWidth style={{ marginTop: -47 }}>
+            <Grid item xs={12} style={{marginTop: 20}}>
+              <FormControl fullWidth>
                 <InputLabel
                   id="demo-simple-select-label"
-                  className="travellerTipAmt"
+                  className="travellerGenderNamelabel"
                 >
                   Tip I Expect
                   <span style={{ color: "hotpink", fontSize: 19 }}>*</span>
@@ -398,9 +463,9 @@ function TravellerDetails(props) {
                       variant="standard"
                       id="demo-simple-select"
                       value={value}
-                      // label="Gender"
+                      label="Gender"
                       onChange={onChange}
-                      className="travellerTipAmtInput"
+                      className="travellerGenderInput"
                       sx={{
                         ".MuiSelect-icon": {
                           color: "pink",
@@ -418,7 +483,7 @@ function TravellerDetails(props) {
                     </Select>
                   )}
                 />
-                <div style={{ color: "red" }}>
+                 <div style={{ color: "red" }}>
                   {errors.tip_expected && errors.tip_expected.message}
                 </div>
               </FormControl>

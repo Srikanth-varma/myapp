@@ -21,12 +21,40 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { FilterList } from "@mui/icons-material";
 
 function ConnectPeople() {
+
+  
+
+
+
   const [closeIcon, setCloseicon] = useState(false);
+  const [dataToPopup, setDataToPopup] = useState();
   const [searchResponse, setSearchResponse] = useState([]);
+  const [searchResponseError, setSearchResponseError] = useState();
+
+  // const imagePerRow = 4;
+   
+  const [next, setNext] = useState(4)
+const handleMoreImage = () => {
+    setNext(next + 4);
+  };
+
   const mySearchData = response_search => {
     //  take parameter passed from Child component
     setSearchResponse(response_search);
+    if(response_search){
+      setFilteredList([])
+      setNext(4)
+    }
     console.log(searchResponse,"searResponse in connect people")
+  };
+  const mySearchDataError = response_search_error => {
+    //  take parameter passed from Child component
+    setSearchResponseError(response_search_error);
+    if(response_search_error){
+      setFilteredList([])
+      setNext(4)
+    }
+    console.log(searchResponseError,"searResponse error in connect people")
   };
   const filterCards=searchResponse;
   const filterCards1 = [
@@ -210,6 +238,7 @@ function ConnectPeople() {
   };
 
   const getFilterData = (filteringValue) => {
+    setNext(4)
     console.log(filteringValue, "obj");
     const dataFilter = filterCards.filter(
       (bookingStatus) =>
@@ -229,8 +258,10 @@ function ConnectPeople() {
   };
 
   // console.log()
-  const handleClick = () => {
+  const handleClick = (item) => {
+    setDataToPopup(item);
     setCloseicon(true);
+    
   };
   const handleClose = () => {
     {
@@ -246,7 +277,7 @@ function ConnectPeople() {
 
 
 
-
+ 
 
   return (
     <>
@@ -255,7 +286,7 @@ function ConnectPeople() {
         Connect <span style={{ color: "#1ec28b" }}>People</span>
       </div>
       <div>
-        <SearchBar mySearchData={mySearchData}/>
+        <SearchBar mySearchData={mySearchData} mySearchDataError={mySearchDataError}/>
       </div>
 
       <div className="connectpeole-main">
@@ -280,6 +311,7 @@ function ConnectPeople() {
         <div className="loadMoreReasultsDiv">
           <div>
             <h1 className="searchResultsHeading">Search Results</h1>
+            {/* <span style={{color:"red",marginTop:"15px"}}>{searchResponseError}</span> */}
           </div>
 
           <Box
@@ -298,7 +330,7 @@ function ConnectPeople() {
                 <Grid container spacing={2} className="connectpeople-MainCard">
                  
                   {Object.entries(filteredList).length > 0 &&
-                    filteredList.map((item, index) => (
+                    filteredList?.slice(0, next)?.map((item, index) => (
                       <Grid item xs={6} key={index}>
                         <Card className="connectpeople-Card">
                           <CardContent>
@@ -307,18 +339,29 @@ function ConnectPeople() {
                             </b>
                           </CardContent>
 
-                          <div className="connectpeople-container">
-                            <div className="connectpeople-inner">
-                              <img
-                                className="connectpeople-img"
-                                variant="top"
-                                src={item.photo?item.photo:"./Assets/Images/human_dummy_image.jpg"}
-                                alt="..."
-                              />
-                            </div>
+                          {item.category==2? (<CardContent className="connectpeople-contentplace">
+              <p>“Is looking for a travel companion to {item.destination.split(',')[0]}”</p>
+            </CardContent>):(<CardContent className="connectpeople-contentplace">
+              <p>“Can be your travel companion to {item.destination.split(',')[0]}”</p>
+            </CardContent>)}
+                        <div className="connectpeople-container">
+                          <div className="connectpeople-inner">
+                            <img
+                              className="connectpeople-img"
+                              variant="top"
+                              src={item.photo?item.photo:"./Assets/Images/human_dummy_image.jpg"}
+                              alt="..."
+                            />
                           </div>
+                        </div>
 
-                          <CardContent style={{fontSize:12,
+
+
+
+
+
+
+                        <CardContent style={{fontSize:12,
                       // width: "max-content",
                       lineHeight: "25px"
                       }}>
@@ -333,10 +376,15 @@ function ConnectPeople() {
                   // item xs={2} 
                   style={{ }}
                   >
-                  <RouteIcon style={{ color: "#1ec28b",transform: "rotate(90deg)", marginBottom: "-7px",marginLeft: "-34px"
-                      }} /> Coimbatore (CBE) <EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",
-                      }} /> Hyderabad (HYD)<EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",
-                     }} />  New Delhi (DEL)
+                    <RouteIcon style={{ color: "#1ec28b",transform: "rotate(90deg)", marginBottom: "-7px",marginLeft: "-20px"}} /> 
+                      {item.flying_from.split(',')[0]} 
+                      {item.transit1?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit1}</span>):null}
+                      {item.transit2?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit2}</span>):null}
+                      {item.transit3?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit3}</span>):null}
+                      {item.transit4?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit4}</span>):null}
+                    <EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />  
+                      {item.destination.split(',')[0]}
+                  
                   </span>
                   
                 </Grid>
@@ -348,7 +396,7 @@ function ConnectPeople() {
                     <span 
                     // style={{marginLeft: "15px"}}
                     >  <CalendarMonthOutlinedIcon style={{ color: "#1ec38b",    marginBottom: "-5px",
-                    marginRight: "4px" }}></CalendarMonthOutlinedIcon>Date Range - {item.date_range_from} to {item.date_range_to}</span>
+                    marginRight: "4px" }}></CalendarMonthOutlinedIcon>{item.departing_on?`Departing Date - ${item.departing_on}`:`Date Range -${item.date_range_from} to ${item.date_range_to}`}</span>
                      </Grid>
             <Grid container
                 spacing={2}
@@ -380,15 +428,17 @@ function ConnectPeople() {
                     ><ModeOfTravelIcon style={{ color: "#1ec38b",marginBottom: "-5px",
                     marginRight: "4px" }}></ModeOfTravelIcon>{item.trip_name}</span>
                     </Grid>
-                    <Grid container
+                    {item.category==1?  <Grid container
                   spacing={2}
                   style={{    marginTop: 10,
                     marginLeft: 0}}>
                       <AttachMoneyIcon style={{ color: "#1ec38b" }}></AttachMoneyIcon>
                       <span style={{marginLeft: "15px"}}>Tip I Expect - {item.tip_expected}</span>
-                      </Grid>
+                      </Grid>:null}
            
           </CardContent> 
+
+
                           {/* <CardContent className="connectpeople-date">
                             <Icon
                               icon="clarity:date-outline-badged"
@@ -427,19 +477,19 @@ function ConnectPeople() {
                             </div>
                           </CardContent> */}
 
-                          <Button
-                            aria-describedby={id}
-                            variant="contained"
-                            onClick={handleClick}
-                            className="connectpeople-cardButton"
-                          >
-                            Connect
-                          </Button>
+                      <Button
+                          aria-describedby={id}
+                          variant="contained"
+                          onClick={()=>handleClick(item)}
+                          className="connectpeople-cardButton"
+                        >
+                          Connect
+                        </Button>
 
-                          <Popover id={id} open={open} closeIcon={closeIcon}>
-                            <ConnectPeoplePopup onChildClick={handleClose} />
-                          </Popover>
-                        </Card>
+                        <Popover id={id} open={open} closeIcon={closeIcon}>
+                          <ConnectPeoplePopup onChildClick={handleClose} connectUserData={dataToPopup}/>
+                        </Popover>
+                      </Card>
 
                         {/* return <Card />  */}
                       </Grid>
@@ -447,13 +497,22 @@ function ConnectPeople() {
 
                   <div className="loadmoreDiv" style={{ color: "#1ec28b" }}>
                   {Object.entries(filteredList).length > 0?(   <p className="loadMoreText">
-                      Load more Results <ArrowDownwardIcon />
+                  {next < filteredList?.length && (
+          <Button
+            // className="mt-4"
+            onClick={handleMoreImage}
+          >
+            Load more
+          </Button>
+        )}
+                      <ArrowDownwardIcon />
                     </p>):null}
                   </div>
                 </Grid>
+             
               ) : (
-                <Grid container spacing={2} className="connectpeople-MainCard">
-                  {filterCards.map((item, index) => (
+               <Grid container spacing={2} className="connectpeople-MainCard">
+                  {Object.entries(filterCards).length > 0? ( filterCards?.slice(0, next)?.map((item, index) => (
                     <Grid item xs={6} key={index}>
                       <Card className="connectpeople-Card">
                         <CardContent>
@@ -461,7 +520,12 @@ function ConnectPeople() {
                             {item.name}
                           </b>
                         </CardContent>
-
+                       
+          {item.category==2? (<CardContent className="connectpeople-contentplace">
+              <p>“Is looking for a travel companion to {item.destination.split(',')[0]}”</p>
+            </CardContent>):(<CardContent className="connectpeople-contentplace">
+              <p>“Can be your travel companion to {item.destination.split(',')[0]}”</p>
+            </CardContent>)}
                         <div className="connectpeople-container">
                           <div className="connectpeople-inner">
                             <img
@@ -494,10 +558,15 @@ function ConnectPeople() {
                   // item xs={2} 
                   style={{ }}
                   >
-                  <RouteIcon style={{ color: "#1ec28b",transform: "rotate(90deg)", marginBottom: "-7px",marginLeft: "-34px"
-                      }} /> Coimbatore (CBE) <EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",
-                      }} /> Hyderabad (HYD)<EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",
-                     }} />  New Delhi (DEL)
+                    <RouteIcon style={{ color: "#1ec28b",transform: "rotate(90deg)", marginBottom: "-7px",marginLeft: "-20px"}} /> 
+                      {item.flying_from.split(',')[0]} 
+                      {item.transit1?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit1}</span>):null}
+                      {item.transit2?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit2}</span>):null}
+                      {item.transit3?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit3}</span>):null}
+                      {item.transit4?(<span><EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />{item.transit4}</span>):null}
+                    <EastIcon style={{ color: "#1ec38b", marginBottom: "-7px",}} />  
+                      {item.destination.split(',')[0]}
+                  
                   </span>
                   
                 </Grid>
@@ -509,7 +578,7 @@ function ConnectPeople() {
                     <span 
                     // style={{marginLeft: "15px"}}
                     >  <CalendarMonthOutlinedIcon style={{ color: "#1ec38b",    marginBottom: "-5px",
-                    marginRight: "4px" }}></CalendarMonthOutlinedIcon>Date Range - {item.date_range_from} to {item.date_range_to}</span>
+                    marginRight: "4px" }}></CalendarMonthOutlinedIcon>{item.departing_on?`Departing Date - ${item.departing_on}`:`Date Range -${item.date_range_from} to ${item.date_range_to}`}</span>
                      </Grid>
             <Grid container
                 spacing={2}
@@ -541,13 +610,13 @@ function ConnectPeople() {
                     ><ModeOfTravelIcon style={{ color: "#1ec38b",marginBottom: "-5px",
                     marginRight: "4px" }}></ModeOfTravelIcon>{item.trip_name}</span>
                     </Grid>
-                    <Grid container
+                    {item.category==1?  <Grid container
                   spacing={2}
                   style={{    marginTop: 10,
                     marginLeft: 0}}>
                       <AttachMoneyIcon style={{ color: "#1ec38b" }}></AttachMoneyIcon>
                       <span style={{marginLeft: "15px"}}>Tip I Expect - {item.tip_expected}</span>
-                      </Grid>
+                      </Grid>:null}
            
           </CardContent> 
 
@@ -589,24 +658,32 @@ function ConnectPeople() {
                         <Button
                           aria-describedby={id}
                           variant="contained"
-                          onClick={handleClick}
+                          onClick={()=>handleClick(item)}
                           className="connectpeople-cardButton"
                         >
                           Connect
                         </Button>
 
                         <Popover id={id} open={open} closeIcon={closeIcon}>
-                          <ConnectPeoplePopup onChildClick={handleClose} />
+                          <ConnectPeoplePopup onChildClick={handleClose} connectUserData={dataToPopup}/>
                         </Popover>
                       </Card>
 
                       {/* return <Card />  */}
                     </Grid>
-                  ))}
+                  ))): (<span style={{color:"red",marginTop:"15px",marginLeft: "15px"}}>{searchResponseError}</span>)}
 
               <div className="loadmoreDiv" style={{ color: "#1ec28b" }}>
               {Object.entries(filterCards).length > 0?(   <p className="loadMoreText">
-                      Load more Results <ArrowDownwardIcon />
+                  {next < filterCards?.length && (
+          <Button
+            // className="mt-4"
+            onClick={handleMoreImage}
+          >
+            Load more
+          </Button>
+        )}
+                      <ArrowDownwardIcon />
                     </p>):null}
                   </div>
                 </Grid>

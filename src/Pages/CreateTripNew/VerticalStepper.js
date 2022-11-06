@@ -20,14 +20,17 @@ import TripDetails from "./TripDetails";
 import FullDetails from "./FullDetails";
 import "./CreateTripNew.css";
 import validation from "./Validation";
+import { useSelector,useDispatch } from "react-redux";
 import axios from "axios";
+
 
 // const API_URL =
 //   "http://ec2-54-185-6-32.us-west-2.compute.amazonaws.com:81/create-trip/";
 
 const VerticalStepper = () => {
   const [activeStep, setActiveStep] = React.useState(0);
-
+  const { isLoggedIn, user } = useSelector((state) => state.auth);
+  // console.log("user_id", user.user_id);
 
   function getSteps() {
     return [
@@ -120,12 +123,32 @@ const VerticalStepper = () => {
   };
 
   const onSubmit = (values) => {
+    const from = new Date(values.date_range_from);
+    const fromdate =
+      from.getDate() + "-" + (from.getMonth() + 1) + "-" + from.getFullYear();
+    console.log(fromdate);
+    const to = new Date(values.date_range_to);
+    const todate =
+      to.getDate() + "-" + (to.getMonth() + 1) + "-" + to.getFullYear();
+    console.log(todate);
+    const departing = new Date(values.departing_on);
+    const departingdate =
+      departing.getDate() +
+      "-" +
+      (departing.getMonth() + 1) +
+      "-" +
+      departing.getFullYear();
+    console.log(departingdate);
     console.log(values, "values");
 
     console.log(isLastStep(), "lastStepchecking");
     if (isLastStep()) {
       let finalVal = {};
-      finalVal["user_id"] = 2;
+      // finalVal["user_id"] = user.user_id;
+      // isLoggedIn?finalVal["user_id"] = user.user_id:'';}
+if(isLoggedIn){
+  finalVal["user_id"] = user.user_id;
+}
       Object.entries(values).map((field, index) => {
         if (
           field[0] === "departing_on" ||
@@ -153,9 +176,18 @@ const VerticalStepper = () => {
         }
       });
       const newdata = new FormData();
-      Object.entries(finalVal).forEach(([key, value]) =>
-        newdata.append(key, value)
-      );
+
+      Object.entries(finalVal).forEach(([key, value]) => {
+        if (key=="date_range_from") {
+          newdata.append("date_range_from", fromdate);
+        } else if (key=="date_range_to") {
+          newdata.append("date_range_to", todate);
+        } else if (key=="departing_on") {
+          newdata.append("departing_on", departingdate);
+        } else {
+          newdata.append(key, value);
+        }
+      });
       // newdata.append("")
 
       console.log(finalVal, "finalVal");
@@ -287,3 +319,4 @@ const VerticalStepper = () => {
 };
 
 export default VerticalStepper;
+

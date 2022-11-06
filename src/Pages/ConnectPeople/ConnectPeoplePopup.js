@@ -13,8 +13,8 @@ import PlaceIcon from "@mui/icons-material/Place";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
-function ConnectPeoplePopup({onChildClick}) {
- 
+function ConnectPeoplePopup({onChildClick,connectUserData}) {
+ console.log(connectUserData,"connectUserData")
   return (
     <Grid className="modalBackground">
       <div className="modalContainer">
@@ -27,19 +27,20 @@ function ConnectPeoplePopup({onChildClick}) {
         </div>
         <div className="popupCatherineImageContainer">
           <img
-            src="./Assets/Images/Image_4.jpg "
+            // src="./Assets/Images/Image_4.jpg"
+            src={connectUserData.photo?connectUserData.photo:"./Assets/Images/human_dummy_image.jpg"}
             className="popupCatherine"
           ></img>
         </div>
         <div className="titleCatherine">
-          <h1>Catherin Theresa</h1>
+          <h1>{connectUserData.name}</h1>
         </div>
         <Grid container className="ageAndGenderContainer">
           <Grid item lg={3} sm={2} md={2} className="ageGroupPopup">
-            Age Group : 20 to 30
+            Age Group : {connectUserData.age_group}
           </Grid>
           <Grid item lg={2} sm={2} md={2}>
-            Gender : Female
+            Gender : {connectUserData.gender}
           </Grid>
         </Grid>
 
@@ -65,51 +66,113 @@ function ConnectPeoplePopup({onChildClick}) {
         <Grid container spacing={2} className="locationDestinationText">
           <Grid item lg={2} className="flyingPheonix">
             <div className="flyingFrom">Flying From</div>
-            <div className="Pheonix">Pheonix</div>
-            <div className="PHX">(PHX)</div>
+            <div className="Pheonix">{connectUserData.flying_from.split(',')[0]}</div>
+            {/* <div className="PHX">(PHX)</div> */}
           </Grid>
-          <Grid item lg={2} className="TransitOneContainer">
+         {connectUserData.transit1?<Grid item lg={2} className="TransitOneContainer">
             <div className="Transit1">Transit 1</div>
-            <div className="LA">Los Angeles</div>
-            <div className="LAX">(LAX)</div>
-          </Grid>
-          <Grid item lg={2} className="TransitTwoContainer">
+            <div className="LA">{connectUserData.transit1}</div>
+            {/* <div className="LAX">(LAX)</div> */}
+          </Grid>:null}
+          {connectUserData.transit2?<Grid item lg={2} className="TransitOneContainer">
             <div className="Transit2">Transit 2</div>
-            <div className="connectDubaibaiPopup1">Dubai</div>
-            <div className="connectDubaibaiPopup1">(DXB)</div>
-          </Grid>
+            <div className="LA">{connectUserData.transit2}</div>
+            {/* <div className="LAX">(LAX)</div> */}
+          </Grid>:null}
+          {connectUserData.transit3?<Grid item lg={2} className="TransitOneContainer">
+            <div className="Transit3">Transit 3</div>
+            <div className="LA">{connectUserData.transit1}</div>
+            {/* <div className="LAX">(LAX)</div> */}
+          </Grid>:null}
+          {connectUserData.transit4?<Grid item lg={2} className="TransitOneContainer">
+            <div className="Transit4">Transit 4</div>
+            <div className="LA">{connectUserData.transit4}</div>
+            {/* <div className="LAX">(LAX)</div> */}
+          </Grid>:null}
+         {/* <Grid item lg={2} className="TransitOneContainer">
+            <div className="Transit4">Transit 4</div>
+            <div className="LA">india</div>
+           
+          </Grid> */}
+       
           <Grid item lg={2} className="destinationChennaiContainer">
             <div className="connectPopupDestination">Destination</div>
-            <div className="connectPopupChennai ">Chennai</div>
-            <div className="connectPopupChennai">(MAA)</div>
+            <div className="connectPopupChennai ">{connectUserData.destination.split(',')[0]}</div>
+            {/* <div className="connectPopupChennai">(MAA)</div> */}
           </Grid>
         </Grid>
-        <div>
+        {/* <div>
           <img
-            src="./Assets/Images/Image_2.jpg"
+            src="./Assets/Images/Image_5.png"
             className="boxDashedImage"
           ></img>
+          
         </div>
+        <div>
+          <img
+            src="./Assets/Images/Image_5.png"
+            className="boxDashedImage2"
+          ></img>
+          
+        </div>
+        <div>
+          <img
+            src="./Assets/Images/Image_5.png"
+            className="boxDashedImage3"
+          ></img>
+          
+        </div>
+        <div>
+          <img
+            src="./Assets/Images/Image_5.png"
+            className="boxDashedImage4"
+          ></img>
+          
+        </div> */}
         <Grid container spacing={2} className="airlineIndigoContainer">
-          <Grid item lg={2}>
+          {/* <Grid item lg={2}>
             <Grid className="airlineText1">Airline</Grid>
             <Box className="indigoBox1">
               <div className="indigoText">Indigo</div>
             </Box>
-          </Grid>
-          <Grid item lg={2} className="stopOneContainer">
+          </Grid> */}
+         {connectUserData.airline? <Grid item lg={2} >
+            <Grid className="airlineText1">Airline</Grid>
+            <Box className="indigoBox1">
+              <div className="indigoText">{connectUserData.airline}</div>
+            </Box>
+          </Grid>:null}
+          {connectUserData.airline1? <Grid item lg={2} className="stopOneContainer">
             <Grid className="airlineText2">Airline</Grid>
             <Box className="indigoBox2">
-              <div className="indigoText">Indigo</div>
+              <div className="indigoText">{connectUserData.airline1}</div>
             </Box>
-          </Grid>
-          <Grid item lg={2} className="stopTwoContainer">
-            <Grid className="airlineText3">Airline</Grid>
+          </Grid>:null}
+          {connectUserData.airline2? <Grid item lg={2} className="stopOneContainer">
+            <Grid className="airlineText2">Airline</Grid>
+            <Box className="indigoBox2">
+              <div className="indigoText">{connectUserData.airline2}</div>
+            </Box>
+          </Grid>:null}
+          {connectUserData.airline3? <Grid item lg={2} className="stopOneContainer">
+            <Grid className="airlineText2">Airline</Grid>
+            <Box className="indigoBox2">
+              <div className="indigoText">{connectUserData.airline3}</div>
+            </Box>
+          </Grid>:null}
+          {connectUserData.airline4? <Grid item lg={2} className="stopOneContainer">
+            <Grid className="airlineText2">Airline</Grid>
+            <Box className="indigoBox2">
+              <div className="indigoText">{connectUserData.airline4}</div>
+            </Box>
+          </Grid>:null}
+          {/* <Grid item lg={2} className="stopTwoContainer">
+            <Grid className="airlineText3">Airline4</Grid>
             <Box className="indigoBox3">
               <div className="indigoText">Indigo</div>
             </Box>
-          </Grid>
-        </Grid>
+          </Grid> */}
+        </Grid> 
         <Grid container className="dateRangeOuterContainer">
           <Box className="dateBoxContainer">
             <Container className="boxInnerContainerpopup">
@@ -119,8 +182,8 @@ function ConnectPeoplePopup({onChildClick}) {
                     icon="clarity:date-outline-badged"
                     className="CalendarMonthRoundedIcon"
                   />
-                  <div className="dateRangepopup">Date</div>
-                  <div className="dateBetweenpopup"> 22 JULY 2022 </div>
+                  <div className="dateRangepopup">{connectUserData.departing_on?"Departing Date":"Date Range" }</div>
+                  <div className="dateBetweenpopup"> {connectUserData.departing_on?connectUserData.departing_on:`${connectUserData.date_range_from} to ${connectUserData.date_range_to}`} </div>
                 </Grid>
                 <Grid item lg={2}>
                   <div className="verticleLine"></div>
@@ -128,17 +191,21 @@ function ConnectPeoplePopup({onChildClick}) {
                 <Grid item lg={5} xs={5} sm={5}>
                   <PriceChangeIcon className="PriceChangeIconConnect" />
                   <div className="tippopup">Tip Expected</div>
-                  <div className="USDpopup">100 USD</div>
+                  <div className="USDpopup">{connectUserData.tip_expected}</div>
                 </Grid>
               </Grid>
             </Container>
           </Box>
         </Grid>
         <Grid container spacing={2} className="iamTextContainer">
-          <Grid item lg={6} xs={6} sm={6} className="iamLookingText">
+        {connectUserData.category==2?(<Grid item lg={6} xs={6} sm={6} className="iamLookingText">
             I am looking for a travel companion to explore the various
-            <div className="placesInChennai">places in chennai.</div>
-          </Grid>
+            <div className="placesInChennai">places in {connectUserData.destination.split(',')[0]}.</div>
+          </Grid>):
+          (<Grid item lg={6} xs={6} sm={6} className="iamLookingText">
+         I am a student travelling to {connectUserData.destination.split(',')[0]} and can be your travel companion.
+          {/* <div className="placesInChennai">places in {connectUserData.destination.split(',')[0]}.</div> */}
+        </Grid>)}
         </Grid>
         <Grid item className="iconsOuterContainer1">
           <Grid container>
@@ -153,8 +220,8 @@ function ConnectPeoplePopup({onChildClick}) {
             >
               <ModeOfTravelRoundedIcon className="ModeOfTravelRoundedIcon" />
               <div className="tripName">Trip Name</div>
-              <div className="chennaiExplore">Chennai </div>
-              <div className="Explore"> Explore</div>
+              {/* <div className="chennaiExplore">Chennai </div> */}
+              <div className="Explore"> {connectUserData.trip_name}</div>
             </Grid>
             <Grid
               sm={6}
@@ -166,7 +233,7 @@ function ConnectPeoplePopup({onChildClick}) {
             >
               <PlaceIcon className="PlaceIcon" />
               <div className="meetupLocation">Meetup Location</div>
-              <div className="airportGate">Airport Gate</div>
+              <div className="airportGate">{connectUserData.meetup_location}</div>
             </Grid>
 
             <Grid
@@ -180,7 +247,7 @@ function ConnectPeoplePopup({onChildClick}) {
             >
               <LanguageRoundedIcon className="LanguageRoundedIcon" />
               <div className="preferedLanguage">Prefered Language</div>
-              <div className="languages">Tamil, English</div>
+              <div className="languages">{connectUserData.prefered_language}</div>
             </Grid>
             <Grid
               item
@@ -193,8 +260,8 @@ function ConnectPeoplePopup({onChildClick}) {
             >
               <Icon icon="fa-solid:hands-helping" className="handShake" />
               <div className="canAssist">Can Assist with</div>
-              <div className="carrryImportant">Carry Important </div>
-              <div className="Documents">Documents</div>
+              <div className="carrryImportant">{connectUserData.assistance_needed} </div>
+              {/* <div className="Documents">Documents</div> */}
             </Grid>
           </Grid>
         </Grid>

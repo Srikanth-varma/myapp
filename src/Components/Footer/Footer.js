@@ -1,13 +1,21 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React,{ useState } from "react";
 import "../../CSS/footer.css";
 import PhoneIcon from "@mui/icons-material/Phone";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailIcon from "@mui/icons-material/Mail";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { NavLink,Link } from "react-router-dom";
+import Button from '@material-ui/core/Button';
+
 
 function Footer(props) {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
     <>
       <div className="footerParentContainer">
@@ -30,40 +38,93 @@ function Footer(props) {
           <Grid item xs={12} sm={12} md={3} lg={3}>
             <p className="secondcolumn">LINKS</p>
             <div className="footerLinks">
-              <p>About Us</p>
-              <p>Create a Trip</p>
-              <p>Connect People</p>
-
-              <p>Privacy Policy</p>
+            
+              <p>
+              <NavLink to="/Create-a-Trip" className="footer-nav-links">
+              Create a Trip
+              </NavLink>
+               
+                </p>
+              <p>
+                <NavLink to="/connect-people" className="footer-nav-links">
+                Connect People
+              </NavLink>
+              </p>
+              <p>
+              <NavLink to="/student-promotion" className="footer-nav-links">
+              Student Community
+              </NavLink>
+              </p>
+              <p>
+              <NavLink to="/desi-community" className="footer-nav-links">
+              Desi Community
+              </NavLink>
+                </p>
+            
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
-            {/* <p className="secondcolumn"></p> */}
+            <p className="thirdcolumn">SUPPORT</p>
             <div className="footerLinks2">
-              <p>Ads</p>
-              <p>Student profile</p>
-              <p>Desi Community</p>
+            <p>
+              <NavLink to="/about-us" className="footer-nav-links">
+              About Us
+              </NavLink>
+              </p>
+              <p>
+              <NavLink to="/privacy-policy" className="footer-nav-links">
+              Privacy Policy
+              </NavLink>
+                
+                </p>
+                <p>
+              <NavLink to="/faq" className="footer-nav-links">
+              FAQs
+              </NavLink></p>
+              <p>
+                <NavLink to="/ads" className="footer-nav-links">
+                Ad’s Enquiry
+              </NavLink>
+              </p>
+            
 
-              <p>XXXXX XXXXX</p>
+              
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={3} lg={3}>
-            <p className="thirdcolumn">CONTACT US</p>
+            <p className="fourthcolumn">CONTACT US</p>
             <div className="thirdcolumncontent">
-              <a
+              <p className="fourthCoulmn_query">Do you have any queries? Please feel
+free to Contact us!!</p>
+<Button 
+              LinkComponent={Link}
+              exact
+              to="/contactus"
+                // activeClassName="active"
+                className="footer-contact-button"
+                // onClick={handleClick}
+              >
+                {" "} <NavLink to="/contactus" style={{textDecoration:"none",color:"black"}}>
+                Contact Us <ExpandLessIcon style={{transform: "rotate(90deg)",marginBottom: "-7px"}}/></NavLink>
+              </Button>
+<div className="emailUnderLine"></div>
+              {/* <a
                 href="mailto:contact@auxtomate.com?subject=New%20Enquiry%20from%20the%20website"
                 style={{
                   textDecoration: "none",
                 }}
-              >
-                <p
-                  className="footerMail"
-                  style={{ color: "white", fontSize: 20 }}
+              >  */}
+
+              <div>{" "}<MailIcon
+                style={{ fontSize: "large", color: "#5dcb42" }}
+              />{" "}  <span
+                  // className="footerMail"
+                  style={{ color: "white", fontSize: "large",marginTop: -10 }}
                 >
-                  contact@travelcompanion.com
-                </p>
-              </a>
-              <div className="emailUnderLine"></div>
+                             contact@travelcompanion.com</span>
+                </div>
+              {/* </a> */}
+             
 
               <div>
                 {" "}

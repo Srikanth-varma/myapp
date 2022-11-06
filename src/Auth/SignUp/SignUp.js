@@ -348,7 +348,7 @@ const mycountry=CountryJson;
           <Grid item lg={6} xs={12}>
             <div>
               <img
-                src="./assests/images/TravelCompanion Logo PNG.png"
+                src="./Assets/Images/TravelCompanion Logo PNG.png"
                 alt="first"
                 className="signupFirstimage"
               />
@@ -363,7 +363,7 @@ const mycountry=CountryJson;
             </h1>
             <div>
               <img
-                src="./assests/images/Register Illustraion Image PNG.png"
+                src="./Assets/Images/Register Illustraion Image PNG.png"
                 alt="first"
                 className="signupPageSecondimage"
               />

@@ -351,12 +351,12 @@ const Filter = (props) => {
                     }}
                   >
                     <FormControlLabel
-                      value="50USD"
+                      value="50"
                       control={<Radio style={{ color: "pink" }} />}
                       label="50 USD"
                     />
                     <FormControlLabel
-                      value="75USD"
+                      value="75"
                       control={<Radio style={{ color: "pink" }} />}
                       label="75 USD"
                     />

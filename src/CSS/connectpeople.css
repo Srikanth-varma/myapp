@@ -54,9 +54,10 @@
   display: inline-block;
   width: 80% !important;
   margin-bottom: 85px;
-  height: auto;
+  height: 650px;
   /* box-shadow: 0px 15px 1px -1px rgb(0 0 0 / 20%) */
   box-shadow: 0px 10px 1px -1px #164938 !important;
+  padding-right: 15px;
 }
 
 .connectpeople-contentCat {
@@ -64,7 +65,13 @@
   margin-right: 114px;
   font-family: sans-serif;
 }
-
+.connectpeople-contentplace {
+  font-size: 15px;
+    margin-right: 241px;
+    font-family: sans-serif;
+    width: 344px;
+    margin-top: -24px !important;
+}
 .loadMoreReasultsDiv {
   margin-bottom: 65px;
   margin-left: 20px;
